@@ -48,6 +48,7 @@ def refreshExposureAlloaction(produceExposure, ReRankList_userTemp, sorted_score
         item_Producer_index = index_ProducerNameList.index(item_ProduceName)
         produceExposure[item_Producer_index] += 1 / math.log(2 + index, 2)
 
+#上面做法指标不治本，现在考虑转化率:有差别地前后跑,归一化
 def getFairliftFactorAndVar_Rate1(producerExposure_TopK, fair_exposure,fairRegulation,producer_quality,producerSize):
     err = []
     up_Sum = 0#
@@ -82,6 +83,39 @@ def getFairliftFactorAndVar_Rate1(producerExposure_TopK, fair_exposure,fairRegul
             rateErr[index] /= up_Sum
         elif (rateErr[index] < 0):
             rateErr[index] /= abs(down_Sum)
+    FairliftFactor = rateErr
+    return (FairliftFactor, err_var)
+
+#治本！！且有差别前后跑，但是 不归一化
+def getFairliftFactorAndVar_Rate2(producerExposure_TopK, fair_exposure,fairRegulation,producer_quality,producerSize):
+    err = []
+    up_Sum = 0#
+    down_Sum = 0
+    rateErr = []
+    for index in range(len(fair_exposure)):
+        temp = fair_exposure[index] - producerExposure_TopK[index]
+        err.append(temp)
+        if (temp < 0):
+            if(fairRegulation==0):
+                rateErr_temp=temp / producer_quality[index]
+                down_Sum += rateErr_temp
+                rateErr.append(rateErr_temp)
+            elif(fairRegulation==1):
+                rateErr_temp = temp / producerSize[index]
+                down_Sum += rateErr_temp
+                rateErr.append(rateErr_temp)
+        else:
+            if (fairRegulation == 0):
+                rateErr_temp = temp / producer_quality[index]
+                up_Sum += rateErr_temp
+                rateErr.append(rateErr_temp)
+            elif (fairRegulation == 1):
+                rateErr_temp = temp / producerSize[index]
+                up_Sum += rateErr_temp
+                rateErr.append(rateErr_temp)
+    err = np.array(err)
+    err_var = np.var(err)
+    print("当前的曝光资源差额值" + str(err) + "当前曝光资源相对于公平分配的方差：" + str(err_var))
     FairliftFactor = rateErr
     return (FairliftFactor, err_var)
 
