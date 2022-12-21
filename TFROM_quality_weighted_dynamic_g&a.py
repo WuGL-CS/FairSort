@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import csv
 import math
+from FairSort_OffLine import FairSort_Utils as Utils
 
 review_number_amazon = 24658
 item_number_amazon = 7538
@@ -20,12 +21,16 @@ provider_num = provider_num_amazon
 k = 20
 total_round = 10 * m
 dataset_name = 'amazon'
-score_file = '/result.csv'
+score_file = '/preference_score.csv'
 item_file = '/item_provider.csv'
 
-random_user_temp = pd.read_csv('datasets/data_' + dataset_name + '/random_user.csv', header=None)
-random_user_temp = random_user_temp.values
-random_user = list(random_user_temp[0])
+# random_user_temp = pd.read_csv('datasets/data_' + dataset_name + '/random_user.csv', header=None)
+# random_user_temp = random_user_temp.values
+# random_user = list(random_user_temp[0])
+if(dataset_name=="google"):
+    random_user=Utils.load_variavle("datasets/data_google/random_user.pkl")
+elif(dataset_name=="amazon"):
+    random_user = Utils.load_variavle("datasets/data_amazon/random_user.pkl")
 
 item_provider = pd.read_csv('datasets/data_' + dataset_name + item_file)
 item_provider = np.array(item_provider.values)
@@ -37,7 +42,7 @@ for i in range(len(score)):
 
 #save result analyze
 csvFile = open('datasets/results/result_' + dataset_name +
-               '/dynamic/dynamic_result_analyze_TFROM_new.csv', 'w', newline='')
+               '/TFROM_Dynamic/dynamic_result_analyze_Quality.csv', 'w', newline='')
 writer = csv.writer(csvFile)
 title = []
 title.append('round')
@@ -80,8 +85,9 @@ for round_temp in range(total_round):
     total_exposure = total_exposure * (round_temp + 1)
 
     fair_exposure = []
+    provider_qualitySum=sum(provider_quality)
     for i in range(provider_num):
-        fair_exposure.append(total_exposure / n * provider_quality[i])
+        fair_exposure.append(total_exposure / provider_qualitySum * provider_quality[i])
 
     # find next item and provider
     for top_k in range(k):

@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 import csv
 import math
-
+from FairSort_OffLine import FairSort_Utils as Utils
+#已阅
 o_num_international = 25190
 u_num_international = 3814
 t_num_international = 6006
@@ -18,10 +19,10 @@ dataset_name = 'ctrip'
 score_file = '/score_international.csv'
 item_file = '/ticket_international.csv'
 
-random_user_temp = pd.read_csv('datasets/data_' + dataset_name + '/random_user.csv', header=None)
-random_user_temp = random_user_temp.values
-random_user = list(random_user_temp[0])
-
+# random_user_temp = pd.read_csv('datasets/data_' + dataset_name + '/random_user.csv', header=None)
+# random_user_temp = random_user_temp.values
+# random_user = list(random_user_temp[0])
+random_user=Utils.load_variavle("datasets/data_ctrip/random_user.pkl")
 ticket_list = pd.read_csv('datasets/data_' + dataset_name + item_file)
 w_score = pd.read_csv('datasets/data_' + dataset_name + score_file)
 score = w_score.iloc[:, 3:]
@@ -41,7 +42,7 @@ for group_name,group_list in grouped_ticket:
 
 #save result analyze
 csvFile = open('datasets/results/result_' + dataset_name +
-               '/dynamic/dynamic_result_analyze_TFROM.csv', 'w', newline='')
+               '/TFROM_Dynamic/dynamic_result_analyze_Uniform.csv', 'w', newline='')
 writer = csv.writer(csvFile)
 title = []
 title.append('round')
