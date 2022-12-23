@@ -30,7 +30,7 @@ if __name__ == '__main__':
     # 对分数矩阵进行归一化操作
     score = np.array(w_score.values)
     for index in range(len(score)):
-        score[index] = (score[index] / (max(score[index]) * 100))
+        score[index] = (score[index] / (max(score[index]) * 10))
 
     sorted_score = []
     for i in range(len(score)):
@@ -39,10 +39,10 @@ if __name__ == '__main__':
     user_Random=Utils.load_variavle("../datasets/data_ctrip/random_user.pkl")
     #hyperParameter
     K=20
-    λ=16
+    λ=8
     ratio=1
-    low_bound=0.8
-    gap=1/128
+    low_bound=0.9
+    gap=1/256
     qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
     # save result analyze
     csvFile=Utils.SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform,λ,ratio,low_bound)

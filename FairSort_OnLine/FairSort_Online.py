@@ -225,7 +225,12 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         elif(qualityOrUniform==0):
             if(len(provider_exposure_quality_rate)<1000):
                 row.append(provider_exposure_quality_rate)
-
+        if(round_temp==len(user_Random)-1):
+            print("算法结束了：")
+            print("提供商的最终公平曝光值应为：",Fair_ExposureList)
+            print("提供商最终的曝光资源分配值为：",producerExposureList)
+            print("曝光资源差额值为:",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
+            print("转化率分布为:",Utils.getProducerExposurCoversionRate(producerExposureList,qualityOrUniform,provider_SizeList,producer_qualityList))
         writer.writerow(row)
 if __name__ == '__main__':
     pass
