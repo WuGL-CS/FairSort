@@ -43,7 +43,7 @@ if __name__ == '__main__':
     gap=1/256
     qualityOrUniform = 1  # 公平诉求：0则为Quality  1 则为Uniform
     # save result analyze
-    csvFile=Utils.SaveResult_WriteTitle(dataset_name,qualityOrUniform,λ,ratio,low_bound)
+    csvFile=Utils.SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bound)
     writer=csv.writer(csvFile)
     t=time.time()
     FairSort.FairSortForTheWhole(userList,λ,score,sorted_score,ratio,25,low_bound,gap,item_ProducerList,"airline",qualityOrUniform,0.1,dataset_name,writer)#（λ=128,ratio=1,K=23, low_bound=0.85，gap=1/256，force=0.1）+left+linearRate1

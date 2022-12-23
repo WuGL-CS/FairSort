@@ -3,6 +3,7 @@ import time
 from FairSort_Offline_Origin import  FairSortForTheWhole as FairSortForTheWhole
 import pandas as pd
 import numpy as np
+from FairSort_OffLine import  FairSort_Utils as Utils
 import FairSort_Offline_Origin as FairFunction
 
 if __name__ == '__main__':
@@ -50,7 +51,7 @@ if __name__ == '__main__':
     # save result analyze
     #命名一个函数名，并且把文件创建好，把title
     # 给写好，给你返回文件的对象
-    csvFile = FairFunction.SaveResult_WriteTitle(dataset_name, qualityOrUniform, λ, ratio, low_bound)
+    csvFile = Utils.SaveResult_WriteTitle_Offline(dataset_name, qualityOrUniform, λ, ratio, low_bound)
     writer = csv.writer(csvFile)
     t = time.time()
     FairSortForTheWhole(userList, λ, score, sorted_score, ratio, 25, low_bound, gap, item_provider, "provider",

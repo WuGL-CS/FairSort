@@ -51,6 +51,7 @@ title.append('satisfaction_total')
 title.append('satisfaction_diverse')
 title.append('exposure_var')
 title.append('exposure_diverse')
+title.append("NDCG:{[0--0.5],[0.5--0.6],[0.6--0.7],[0.7--0.75],[0.75-0.8],[0.8--0.85],[0.85--0.9],[0.9--0.95],[0.95--1]}")
 writer.writerow(title)
 
 user_satisfaction = [0 for i in range(m)]
@@ -58,7 +59,7 @@ user_rec_time = [0 for i in range(m)]
 user_satisfaction_total = 0
 satisfaction_total = 0
 provider_exposure_score = [0 for i in range(len(provider))]
-
+satisDistributeList=[0 for x in range(9)]
 ideal_score = [0 for i in range(m)]
 for user_temp in range(m):
     for rank_temp in range(k):
@@ -104,7 +105,7 @@ for round_temp in range(total_round):
                 next_user]
             provider_exposure_score[next_provider] += 1 / math.log((top_k + 2), 2)
             del rec_flag[0]
-
+    Utils.getSatisfactionDistribution2(user_satisfaction_temp,satisDistributeList)
     user_satisfaction_total -= user_satisfaction[next_user]
     user_satisfaction[next_user] = (user_satisfaction[next_user] * user_rec_time[next_user] + user_satisfaction_temp) \
                                    / (user_rec_time[next_user] + 1)
@@ -135,6 +136,7 @@ for round_temp in range(total_round):
     row.append(diverse_satisfaction)
     row.append(np.var(avg_provider_exposure_score))
     row.append(diverse_exposure_score)
+    row.append(satisDistributeList)
     writer.writerow(row)
 
 print('Finished!')

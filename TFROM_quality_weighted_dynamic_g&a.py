@@ -53,6 +53,7 @@ title.append('exposure_var')
 title.append('exposure_diverse')
 title.append('exposure_quality_var')
 title.append('exposure_quality_diverse')
+title.append("NDCG:{[0--0.5],[0.5--0.6],[0.6--0.7],[0.7--0.75],[0.75-0.8],[0.8--0.85],[0.85--0.9],[0.9--0.95],[0.95--1]}")
 writer.writerow(title)
 
 user_satisfaction = [0 for i in range(m)]
@@ -61,7 +62,7 @@ user_satisfaction_total = 0
 satisfaction_total = 0
 provider_exposure_score = [0 for i in range(provider_num)]
 provider_quality = [0 for i in range(provider_num)]
-
+satisDistributeList=[0 for x in range(9)]
 ideal_score = [0 for i in range(m)]
 for user_temp in range(m):
     for rank_temp in range(k):
@@ -119,7 +120,7 @@ for round_temp in range(total_round):
     user_satisfaction_total += user_satisfaction[next_user]
     satisfaction_total += user_satisfaction_temp
     user_rec_time[next_user] += 1
-
+    Utils.getSatisfactionDistribution2(user_satisfaction_temp,satisDistributeList)
     avg_provider_exposure_score = []
     provider_exposure_quality = []
     for i in range(provider_num):
@@ -154,6 +155,7 @@ for round_temp in range(total_round):
     row.append(diverse_exposure_score)
     row.append(np.var(provider_exposure_quality))
     row.append(divers_exposure_quality)
+    row.append(satisDistributeList)
     writer.writerow(row)
 
 csvFile.close()

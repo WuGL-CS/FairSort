@@ -14,7 +14,7 @@ def load_variavle(filename):
         return r
     except EOFError:
         return ""
-def SaveResult_WriteTitle(dataset_name,qualityOrUniform,λ,ratio,low_bound):
+def SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bound):
     fairType=""
     if qualityOrUniform==0:fairType="Quality"
     elif(qualityOrUniform==1):fairType="Uniform"
@@ -44,6 +44,33 @@ def SaveResult_WriteTitle(dataset_name,qualityOrUniform,λ,ratio,low_bound):
     title.append("FairSort曝光err")
     title.append("提供商物品数分布")
     title.append("提供商价值量分布")
+    writer.writerow(title)
+    return csvFile
+
+def SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform,λ,ratio,low_bound):
+    fairType=""
+    if qualityOrUniform==0:fairType="Quality"
+    elif(qualityOrUniform==1):fairType="Uniform"
+    fileName="/FairSort"+fairType+"On"+str(λ)+"_"+str(ratio)+"_"+str(low_bound)+".csv"
+    csvFile = open("../datasets/results/result_" + dataset_name+ "/FairSortOnLine"+fileName
+                   , 'w', newline='')
+    writer = csv.writer(csvFile)
+    title = []
+    title.append('round')
+    title.append('satisfaction_var')
+    title.append('satisfaction_diverse')
+    title.append('satisfaction_total')
+    if(qualityOrUniform==0):
+        # title.append('Top-k_qualityVar')
+        title.append('exposure_quality_var')
+        title.append('exposure_quality_diverse')
+    elif(qualityOrUniform==1):
+        # title.append('Top-k_SizeVar')
+        title.append('exposure_var')
+        title.append('exposure_diverse')
+    title.append("NDCG-Distribute")
+    if(dataset_name!="google"):
+        title.append("转化率分布")
     writer.writerow(title)
     return csvFile
 
@@ -90,24 +117,73 @@ def getSatisfactionDistribution(user_satisfaction):
     count4 = 0
     count5 = 0
     count6 = 0
+    count7 = 0
+    count8 = 0
+    count9 = 0
     for satisfaction in user_satisfaction:
 
-        if (satisfaction < 0.7):
+        if (satisfaction < 0.5):
             count1 += 1
-        elif (satisfaction <= 0.75):
+        elif (satisfaction <= 0.6):
             count2 += 1
-        elif (satisfaction <= 0.8):
+        elif (satisfaction <= 0.7):
             count3 += 1
-        elif (satisfaction <= 0.85):
+        elif (satisfaction <= 0.75):
             count4 += 1
-        elif (satisfaction <= 0.9):
+        elif (satisfaction <= 0.8):
             count5 += 1
-        elif (satisfaction <= 0.95):
+        elif (satisfaction <= 0.85):
             count6 += 1
-    print("0.7以下", count1)
-    print("0.7—0.75", count2)
-    print("0.75—0.8", count3)
-    print("0.8—0.85", count4)
-    print("0.85—0.9", count5)
-    print("0.9—0.95", count6)
-    print("总共:", count6 + count5 + count4 + count3 + count2 + count1)
+        elif (satisfaction <= 0.9):
+            count7 += 1
+        elif (satisfaction <= 0.95):
+            count8 += 1
+        elif (satisfaction <= 1):
+            count9 += 1
+    print("0.5以下", count1)
+    print("0.5—0.6", count2)
+    print("0.6—0.7", count3)
+    print("0.7—0.75", count4)
+    print("0.75—0.8", count5)
+    print("0.8—0.85", count6)
+    print("0.85—0.9", count7)
+    print("0.9—0.95", count8)
+    print("0.95—1", count9)
+    print("总共:", count9+count8+count7+count6 + count5 + count4 + count3 + count2 + count1)
+
+def getSatisfactionDistribution2(user_satisfaction,user_satisDistributList):
+        if (user_satisfaction < 0.5):
+            user_satisDistributList[0] += 1
+        elif (user_satisfaction <= 0.6):
+            user_satisDistributList[1] += 1
+        elif (user_satisfaction <= 0.7):
+            user_satisDistributList[2] += 1
+        elif (user_satisfaction <= 0.75):
+            user_satisDistributList[3] += 1
+        elif (user_satisfaction <= 0.8):
+            user_satisDistributList[4] += 1
+        elif (user_satisfaction <= 0.85):
+            user_satisDistributList[5] += 1
+        elif (user_satisfaction <= 0.9):
+            user_satisDistributList[6] += 1
+        elif (user_satisfaction <= 0.95):
+            user_satisDistributList[7] += 1
+        elif (user_satisfaction <= 1):
+            user_satisDistributList[8] += 1
+
+def getStandardDeviation(List):
+    avg=sum(List)/len(List)
+    StandardDeviation=0
+    for index in range(len(List)):
+        StandardDeviation+=abs(List[index]-avg)/len(List)
+    return StandardDeviation
+
+if __name__ == '__main__':
+    satisDistribute=[0 for x in range(9)]
+    print(satisDistribute)
+    getSatisfactionDistribution2(1,satisDistribute)
+    getSatisfactionDistribution2(0,satisDistribute)
+    getSatisfactionDistribution2(0.7,satisDistribute)
+    getSatisfactionDistribution2(0.92,satisDistribute)
+    getSatisfactionDistribution2(0.77,satisDistribute)
+    print(satisDistribute)
