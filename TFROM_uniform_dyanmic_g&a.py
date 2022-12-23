@@ -42,7 +42,7 @@ for i in range(len(score)):
 
 #save result analyze
 csvFile = open('datasets/results/result_' + dataset_name +
-               '/TFROM_Dynamic/dynamic_result_analyze_Uniform.csv', 'w', newline='')
+               '/TFROM_Dynamic/dynamic_result_Uniform.csv', 'w', newline='')
 writer = csv.writer(csvFile)
 title = []
 title.append('round')

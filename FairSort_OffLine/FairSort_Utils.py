@@ -68,7 +68,7 @@ def SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform,λ,ratio,low_boun
         # title.append('Top-k_SizeVar')
         title.append('exposure_var')
         title.append('exposure_diverse')
-    title.append("NDCG-Distribute")
+    title.append("NDCG:{[0--0.5],[0.5--0.6],[0.6--0.7],[0.7--0.75],[0.75-0.8],[0.8--0.85],[0.85--0.9],[0.9--0.95],[0.95--1]}")
     if(dataset_name!="google"):
         title.append("转化率分布")
     writer.writerow(title)

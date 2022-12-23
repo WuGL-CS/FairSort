@@ -145,6 +145,7 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
     producerQualitySum=0
     #算法开始：
     for round_temp in range(len(user_Random)):
+        print("当前第"+str(round_temp)+"个用户请求到达:")
         userTemp=user_Random[round_temp]
         userIDCG=UserIDCGList[userTemp]
         if(qualityOrUniform==0):#价值
@@ -179,7 +180,7 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         result=FairSortForUser(userTemp,λ,userIDCG,liftFactor,score,sorted_score,NDCG_LowBound,K,gap,ratio,item_ProducerNameList,index_ProducerNameList)
         userSatisTemp=result[0] #用户获得的推荐列表质量
         reRankList=result[1]#重新排序的列表
-        print("当前用户："+str(userTemp)+",获得推荐列表NDCG："+str(result[0]))
+        print("当前用户："+str(userTemp)+",获得推荐列表NDCG：=========>"+str(result[0]))
         #重新分配资源：
         refreshExposureAlloaction(producerExposureList,reRankList,sorted_score,K,userTemp,item_ProducerNameList,index_ProducerNameList)
         Utils.getSatisfactionDistribution2(userSatisTemp, satisDistributeList)
@@ -215,6 +216,8 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         row.append(satisDistributeList)
         print("NDCG分布:",satisDistributeList)
         print("提升因子:",liftFactor)
+        print("曝光资源公平分配值:",Fair_ExposureList)
+        print("提供商当前拥有的曝光资源:",producerExposureList)
         print("曝光分配差额值:",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
         if(qualityOrUniform==1):
             if(len(provider_exposure_num_rate)<1000):
