@@ -190,14 +190,14 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         userAvgSatisfactionTotal += userAvgSatisfactionList[userTemp]
         satisfactionTotal += userSatisTemp
         userRecomendTimeList[userTemp] += 1
-
-        provider_exposure_num_rate = Utils.getProducerExposurCoversionRate(producerExposureList,1,provider_SizeList,producer_qualityList)
-        provider_exposure_quality_rate = Utils.getProducerExposurCoversionRate(producerExposureList,0,provider_SizeList,producer_qualityList)
-
+        if(qualityOrUniform==1):
+            provider_exposure_num_rate = Utils.getProducerExposurCoversionRate(producerExposureList,1,provider_SizeList,producer_qualityList)
+            diverse_exposure_score=Utils.getStandardDeviation(provider_exposure_num_rate)
+        if(qualityOrUniform==0):
+            provider_exposure_quality_rate = Utils.getProducerExposurCoversionRate(producerExposureList,0,provider_SizeList,producer_qualityList)
+            divers_exposure_quality = Utils.getStandardDeviation(provider_exposure_quality_rate)
 
         diverse_satisfaction=Utils.getStandardDeviation(userAvgSatisfactionList)
-        diverse_exposure_score=Utils.getStandardDeviation(provider_exposure_num_rate)
-        divers_exposure_quality=Utils.getStandardDeviation(provider_exposure_quality_rate)
 
         # save result analyze
         row = []
@@ -206,12 +206,14 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         row.append(diverse_satisfaction)
         row.append(satisfactionTotal)
         if (qualityOrUniform == 1):
-            row.append(np.var(provider_exposure_num_rate))
-            print("******公平性指标******：", np.var(provider_exposure_num_rate))
+            temp=np.var(provider_exposure_num_rate)
+            row.append(temp)
+            print("******公平性指标******：", temp)
             row.append(diverse_exposure_score)
         if(qualityOrUniform == 0):
-            row.append(np.var(provider_exposure_quality_rate))
-            print("******公平性指标******：", np.var(provider_exposure_quality_rate))
+            temp=np.var(provider_exposure_quality_rate)
+            row.append(temp)
+            print("******公平性指标******：", temp)
             row.append(divers_exposure_quality)
         row.append(satisDistributeList)
         print("NDCG分布:",satisDistributeList)
