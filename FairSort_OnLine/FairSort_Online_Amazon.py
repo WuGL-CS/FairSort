@@ -23,9 +23,8 @@ if __name__ == '__main__':
     # ticket_list:订单表：ID airline classes price
     item_ProducerList = pd.read_csv('../datasets/data_' + dataset_name + item_file)
     # 用户和item的贡献矩阵：评分矩阵
-    w_score = pd.read_csv('../datasets/data_' + dataset_name + score_file)
+    w_score = pd.read_csv('../datasets/data_' + dataset_name + score_file,header=None)
     # 评分矩阵score
-    w_score = w_score.iloc[:, 3:]
     score = np.array(w_score)
     score = score[:m, :n]
     # 对分数矩阵进行归一化操作
@@ -40,9 +39,9 @@ if __name__ == '__main__':
     user_Random=Utils.load_variavle("../datasets/data_amazon/random_user.pkl")
     #hyperParameter
     K=20
-    λ=8
+    λ=1
     ratio=0.1
-    low_bound=0.9
+    low_bound=0.95
     gap=1/256
     qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
     # save result analyze
