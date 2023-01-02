@@ -18,11 +18,11 @@ ax.plot(round, TFROM_exposure_quality_var, label='tfrom')  # Plot some data on t
 ax.set_xlabel('x label')  # Add an x-label to the axes.
 ax.set_ylabel('y label')  # Add a y-label to the axes.
 ax.set_title("Simple Plot")  # Add a title to the axes.
-ax.legend();  # Add a legend.
+ax.legend() # Add a legend.
 ax.grid(True)
 plt.show()
 
-#title:
+# title:
 #   0: satisfaction_Total
 #   1:NDCG_Var
 #   2:exposure_var

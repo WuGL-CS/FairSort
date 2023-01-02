@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # 对分数矩阵进行归一化操作
     score = np.array(w_score.values)
     for index in range(len(score)):
-        score[index] = (score[index] / (max(score[index]) * 10000))
+        score[index] = (score[index] / (max(score[index]) * 1000))
 
     sorted_score = []
     for i in range(len(score)):
