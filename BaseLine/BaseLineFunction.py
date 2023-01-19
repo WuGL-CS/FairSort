@@ -32,8 +32,8 @@ def minimumExposure_OffLine(userList,K,itemExposureList):
 #Mixed_k :OnLine Version
 def Mixed_k_OnLine(userId,sorted_Score,K):
     halfLength=int(math.ceil((K+0.0)/2))
-    half=sorted_Score[userId][0:halfLength]
-    randomHalf=random.sample(sorted_Score[userId][halfLength:],int(K-halfLength))
+    half=list(sorted_Score[userId][0:halfLength])
+    randomHalf=random.sample(list(sorted_Score[userId][halfLength:]),int(K-halfLength))
     return half+randomHalf
 #Mixed_k :OffLine Version
 def Mixed_k_Offline(userList,sorted_Score,K):

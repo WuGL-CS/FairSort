@@ -19,12 +19,12 @@ if __name__ == '__main__':
     user_number_google = 3335
     provider_num_google = 4927
 
-    m = user_number_google
-    n = item_number_google
-    provider_num = provider_num_google
+    m = user_number_amazon
+    n = item_number_amazon
+    provider_num = provider_num_amazon
 
     k = 25
-    dataset_name = 'google'
+    dataset_name = 'amazon'
     score_file = '/preference_score.csv'
     item_file = '/item_provider.csv'
 
@@ -35,18 +35,18 @@ if __name__ == '__main__':
     #对分数矩阵进行归一化操作
     score = np.array(w_score.values)
     for index in range(len(score)):
-        score[index]= (score[index]/(max(score[index])*1000))
+        score[index]= (score[index]/(max(score[index])*100))
 
     sorted_score = []
     for i in range(len(score)):
         sorted_score.append(np.argsort(-score[i]))
 
         # hyperParameter
-    λ = 4
-    ratio = 0.15
-    low_bound = 0.85
-    gap = 1/64
-    qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
+    λ = 8
+    ratio = 0.1
+    low_bound = 0.95
+    gap = 1/32
+    qualityOrUniform = 1  # 公平诉求：0则为Quality  1 则为Uniform
     userList = [i for i in range(m)]  # userList的构造
     # save result analyze
     #命名一个函数名，并且把文件创建好，把title

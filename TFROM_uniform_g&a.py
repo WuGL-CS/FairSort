@@ -3,7 +3,7 @@ import numpy as np
 import csv
 import math
 import random
-from FairSort_OffLine import FairSort_Offline_Origin as FairFunction
+from FairSort_OffLine import FairSort_Utils as FairFunction
 review_number_amazon = 24658
 item_number_amazon = 7538
 user_number_amazon = 1851
@@ -48,7 +48,7 @@ title.append('exposure_diverse')
 title.append('TFROM-Conversation Rate')
 writer.writerow(title)
 
-for k_temp in range(24, k+1):
+for k_temp in range(2, k+1):
     total_exposure = 0
     for i in range(k_temp):
         total_exposure += 1 / math.log((i + 2), 2)

@@ -20,7 +20,7 @@ provider_num = provider_num_amazon
 
 k = 20
 total_round = 10 * m
-dataset_name = 'amazon'
+dataset_name = 'google'
 score_file = '/preference_score.csv'
 item_file = '/item_provider.csv'
 

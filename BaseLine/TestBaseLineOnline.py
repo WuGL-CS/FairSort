@@ -25,7 +25,7 @@ def writeCsvTitleOnLine(DataSetName,BaseLineName):
     return writer
 
 #compute:satisfaction_var,satisfaction_total,exposure_var,exposure_quality_var
-def getRecomendationList(userId, BaseLineName,sorted_score,K,itemExposureList):
+def getRecomendationListOnLine(userId, BaseLineName,sorted_score,K,itemExposureList):
     recommendationList=None
     if (BaseLineName == "Top_K_Online"):
         recommendationList=BaseLineFunction.Top_K_Online(userId,sorted_score,K)
@@ -70,7 +70,7 @@ def testBaseLineOnLine(DataSetName,BaseLineName,K,writer):
     for roundTime in range(len(userRandom)):
         print("当前第"+str(roundTime)+"个user")
         userId=userRandom[roundTime]
-        recommendationList=getRecomendationList(userId,BaseLineName,sorted_score,K,itemExposureList)
+        recommendationList=getRecomendationListOnLine(userId,BaseLineName,sorted_score,K,itemExposureList)
         satisfactionTemp=baseLineUtils.getSatisfaction(userId,score,recommendationList,ideal_score)
         AllocateExposureOnline(providerExposureList,recommendationList,providerNameList,item_ProducerNameList)
 
@@ -121,5 +121,5 @@ def testBaseLineOnLine(DataSetName,BaseLineName,K,writer):
 
 
 if __name__ == '__main__':
-    writer=writeCsvTitleOnLine("google","minimumExposure_OnLine")
-    testBaseLineOnLine("google","minimumExposure_OnLine",20,writer)
+    writer=writeCsvTitleOnLine("ctrip","Random_k_Online")
+    testBaseLineOnLine("ctrip","Random_k_Online",20,writer)

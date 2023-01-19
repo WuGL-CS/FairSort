@@ -177,7 +177,6 @@ def getStandardDeviation(List):
     for index in range(len(List)):
         StandardDeviation+=abs(List[index]-avg)/len(List)
     return StandardDeviation
-
 if __name__ == '__main__':
     satisDistribute=[0 for x in range(9)]
     print(satisDistribute)

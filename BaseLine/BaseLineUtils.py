@@ -58,18 +58,6 @@ def getData(DataSetName,K):
     item_provider = pd.read_csv('../datasets/data_' + DataSetName + item_file)
     # item_provider = np.array(item_provider.values)
     w_score = pd.read_csv('../datasets/data_' + DataSetName + score_file, header=None)
-    if(DataSetName=="google" or DataSetName=="amazon"):
-        score = np.array(w_score.values)
-        sorted_score = []
-        for i in range(len(score)):
-            sorted_score.append(np.argsort(-score[i]))
-    else:
-        score = w_score.iloc[:, 3:]
-        score = np.array(score)
-        sorted_score = []
-        for i in range(len(score)):
-            sorted_score.append(np.argsort(-score[i]))
-
     if (DataSetName == "amazon" or DataSetName == "google"):
         producerClassName = "provider"
     else:
@@ -93,6 +81,21 @@ def getData(DataSetName,K):
         m = user_number_amazon
         n = item_number_amazon
         provider_num = provider_num_amazon
+    if(DataSetName=="google" or DataSetName=="amazon"):
+        score = np.array(w_score.values)
+        sorted_score = []
+        for i in range(len(score)):
+            sorted_score.append(np.argsort(-score[i]))
+    else:
+        score = w_score.iloc[:, 3:]
+        score = np.array(score)
+        score = score[1:m+1, :n]
+        sorted_score = []
+        for i in range(len(score)):
+            sorted_score.append(np.argsort(-score[i]))
+
+
+
     ideal_score = [0 for i in range(m)]
     for user_temp in range(m):
         for rank_temp in range(K):
