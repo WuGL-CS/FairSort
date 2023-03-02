@@ -42,7 +42,7 @@ if __name__ == '__main__':
     K=20
     λ=8
     ratio=0.2
-    low_bound=0.85
+    low_bound=0.9
     gap=1/64
     qualityOrUniform =0  # 公平诉求：0则为Quality  1 则为Uniform
     # save result analyze

@@ -4,7 +4,13 @@ import csv
 import math
 import random
 import pickle
-from FairSort_OffLine import FairSort_Offline_Origin as FairFunction
+from FairSort_OffLine import FairSort_Utils as FairFunction
+def getFairAndCurrentErr(producerExposure,fair_exposure):
+    err=[]
+    for index in range(len(fair_exposure)):
+        err.append(fair_exposure[index]-producerExposure[index])
+    return  err
+
 #论文作者的Bug：（Amazon）数据集
     #连喜好分数矩阵的csv导入名称都搞错，写成result.csv  实际应该是：item_provider.csv
     #fair_exposure计算逻辑惊人啊！！！   （居然这么算）
@@ -62,7 +68,7 @@ if __name__ == '__main__':
 
     # save result analyze
     csvFile = open('datasets/results/result_' + dataset_name
-                   + '/TFROM/result_TFROM_(TRUE  Min  RightFairExposure).csv', 'w', newline='')
+                   + '/TFROM/result_quality.csv', 'w', newline='')
     writer = csv.writer(csvFile)
     title = []
     title.append('k')
@@ -74,6 +80,8 @@ if __name__ == '__main__':
     title.append('Top-K_exposure_quality_var')
     title.append('exposure_quality_var')
     title.append('exposure_quality_diverse')
+    title.append("fair_VarAtFirst")
+    title.append("fair_Var")
     # title.append('Top-k Conversation Rate')
     # title.append('TFROM-Conversation Rate')
     writer.writerow(title)
@@ -223,6 +231,8 @@ if __name__ == '__main__':
         row.append(FairFunction.getVar(TopK_ExposureConversationRate))
         row.append(np.var(provider_exposure_quality))
         row.append(divers_exposure_quality)
+        row.append(np.var(getFairAndCurrentErr(producerExposure_TopK,fair_exposure)))
+        row.append(np.var(getFairAndCurrentErr(provider_exposure_score,fair_exposure)))
         # row.append(TopK_ExposureConversationRate)
         # row.append(provider_exposure_quality)
         writer.writerow(row)

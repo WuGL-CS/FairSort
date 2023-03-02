@@ -42,7 +42,7 @@ if __name__ == '__main__':
         sorted_score.append(np.argsort(-score[i]))
 
         # hyperParameter
-    λ = 4
+    λ = 8
     ratio = 0.15
     low_bound = 0.85
     gap = 1/64
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     csvFile = Utils.SaveResult_WriteTitle_Offline(dataset_name, qualityOrUniform, λ, ratio, low_bound)
     writer = csv.writer(csvFile)
     t = time.time()
-    for K in range(2,26):
+    for K in range(22,26):
         FairSortForTheWhole(userList, λ, score, sorted_score, ratio, K, low_bound, gap, item_provider, "provider",
                         qualityOrUniform, 0.1,dataset_name,
                         writer)  # （λ=128,ratio=1,K=23, low_bound=0.85，gap=1/256，force=0.1）+left+linearRate1
