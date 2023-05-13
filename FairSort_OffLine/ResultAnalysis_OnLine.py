@@ -113,12 +113,12 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label):
 # BestResultFilePath={}
 # BestResultFilePath["TFROM_online_Quality_Weighted"]="../datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Quality.csv"
 # BestResultFilePath["TFROM_online_Uniform"]="../datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Uniform.csv"
+# BestResultFilePath["FairSort_online_Quality_Weighted"]="../datasets/results/result_amazon/FairSortOnLine/FairSortQualityOn1_0.1_0.95.csv"
 # BestResultFilePath["minimum_exposure"]="../BaseLine/Results/OnLine/amazon/minimumExposure_OnLine.csv"
 # BestResultFilePath["Top-K"]="../BaseLine/Results/OnLine/amazon/Top_K_Online.csv"
 # BestResultFilePath["all_random"]="../BaseLine/Results/OnLine/amazon/Random_k_Online.csv"
-# BestResultFilePath["Mixed-k"]="../BaseLine/Results/OnLine/amazon/Mixed_k_OnLine.csv"
 # BestResultFilePath["FairSort_online_Uniform"]="../datasets/results/result_amazon/FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv"
-# BestResultFilePath["FairSort_online_Quality_Weighted"]="../datasets/results/result_amazon/FairSortOnLine/FairSortQualityOn1_0.1_0.95.csv"
+# BestResultFilePath["Mixed-k"]="../BaseLine/Results/OnLine/amazon/Mixed_k_OnLine.csv"
 #
 # resultAnalysis_Online("amazon",BestResultFilePath,"","satisfaction_var",5.8,3.2,"customer_request","Variance of NDCG")
 
@@ -184,10 +184,10 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label):
 
 #Google:Result_Analysis:
   # Variance of the ratio of exposure and relevance
-BestResultFilePath={}
-BestResultFilePath["TFROM_online_Quality_Weighted"]="../datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv"
-BestResultFilePath["Top-K"]="../BaseLine/Results/OnLine/google/Top_K_Online.csv"
-BestResultFilePath["all_random"]="../BaseLine/Results/OnLine/google/Random_k_Online.csv"
-BestResultFilePath["Mixed-k"]="../BaseLine/Results/OnLine/google/Mixed_k_OnLine.csv"
-BestResultFilePath["FairSort_online_Quality_Weighted"]="../datasets/results/result_google/FairSortOnLine/FairSortQualityOn8_0.2_0.85.csv"
-resultAnalysis_Online("google",BestResultFilePath,"","exposure_quality_var",5.8,3.2,"customer_request","Variance of the ratio of exposure and relevance")
+# BestResultFilePath={}
+# BestResultFilePath["TFROM_online_Quality_Weighted"]="../datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv"
+# BestResultFilePath["Top-K"]="../BaseLine/Results/OnLine/google/Top_K_Online.csv"
+# BestResultFilePath["all_random"]="../BaseLine/Results/OnLine/google/Random_k_Online.csv"
+# BestResultFilePath["Mixed-k"]="../BaseLine/Results/OnLine/google/Mixed_k_OnLine.csv"
+# BestResultFilePath["FairSort_online_Quality_Weighted"]="../datasets/results/result_google/FairSortOnLine/FairSortQualityOn8_0.2_0.85.csv"
+# resultAnalysis_Online("google",BestResultFilePath,"","exposure_quality_var",5.8,3.2,"customer_request","Variance of the ratio of exposure and relevance")
