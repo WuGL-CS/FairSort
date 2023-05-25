@@ -185,6 +185,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\datasets\data_amazon\item_provider.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\datasets\data_ctrip\ticket_international.csv">
           <value>
             <Attribute>
