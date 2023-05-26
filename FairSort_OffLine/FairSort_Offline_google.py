@@ -4,7 +4,6 @@ from FairSort_Offline import  FairSortForTheWhole as FairSortForTheWhole
 import pandas as pd
 import numpy as np
 from FairSort_OffLine import  FairSort_Utils as Utils
-import FairSort_Offline_Origin as FairFunction
 
 if __name__ == '__main__':
 
