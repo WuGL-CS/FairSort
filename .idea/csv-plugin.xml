@@ -171,20 +171,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\FairSort实验结果\数据集：Ctrip\基于数量FairSort：（λ=16,ratio=1,K=index, low_bound=0.85，gap=1256，force=0.1）+left+linear3）.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\FairSort实验结果\数据集：Ctrip\基于数量诉求的公平（挑一个出来）\基于数量公平的TFROM实验结果（完整逻辑）\result_analyze_TFROM.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\datasets\data_amazon\item_provider.csv">
           <value>
             <Attribute>
@@ -214,6 +200,13 @@
           </value>
         </entry>
         <entry key="\datasets\results\result_amazon\TFROM\result_TFROM_(TRUE  Min  RightFairExposure).csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\datasets\results\result_amazon\TFROM\result_Uniform.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
