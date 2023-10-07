@@ -1,4 +1,10 @@
 # FairSort Model
-![img_1.png](img_1.png)
-#FairSort：Hyperparameter setting
-![img_2.png](img_2.png)
+<img src="img_1.png" alt="图片描述" width="80%" height="auto">
+
+# FairSort：Hyperparameter setting
+<img src="img_2.png" alt="图片描述" width="80%" height="auto">
+
+[//]: # ()
+[//]: # (![img_1.png]&#40;img_1.png&#41;)
+
+[//]: # (![img_2.png]&#40;img_2.png&#41;)
