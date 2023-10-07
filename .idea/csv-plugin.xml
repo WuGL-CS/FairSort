@@ -199,13 +199,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\datasets\results\result_amazon\TFROM\result_TFROM_(TRUE  Min  RightFairExposure).csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\datasets\results\result_amazon\TFROM\result_Uniform.csv">
           <value>
             <Attribute>
