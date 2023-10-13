@@ -1,5 +1,7 @@
 import math
 import random
+
+import numpy
 import numpy as np
 #userId:current services user
 #sortedScore:recommendationList
@@ -152,6 +154,86 @@ def FairRecOffLine(U, P, k, V, alpha):
     return A
 
 
+#CP-FairModel：Offline Version
 
+#进行参数的简约：
+    #P的计算放入内部：
+def CP_Fair_Offline(score,sorted_Score,top_k,topK,groupNum,totalUsers,totalItems,fair_mode,λ1=0,λ2=0):
+    A={}
+    P=numpy.ndarray((totalUsers,topK),dtype=int)
+    for user in range(totalUsers):
+        P[user]=sorted_Score[user][0:topK]
+    print(f"Runing fairness optimisation on '{fair_mode}', {format(λ1, 'f')}, {format(λ2, 'f')}")
+    #获取itemFactor
+    W=np.zeros((totalUsers,topK))#线性规划的系数矩阵
+    W_result=np.zeros((totalUsers,topK))#规划后的结果矩阵
+    item_groups=np.zeros(groupNum)
+    # totalUsers—————>UFlag：
+
+    UFlag = np.zeros((totalUsers, groupNum))
+    for index in range(totalUsers): UFlag[index][1] = 1  # [1]:inactive   [0]:active
+    user = [i for i in range(totalUsers)]
+    random.seed(10)
+    random.shuffle(user)
+    active_User = user[0:int(totalUsers * 0.2)]
+    for index in active_User:
+        UFlag[index][0] = 1
+        UFlag[index][1] = 0
+
+    # score：—————>itemFlag：
+    itemFlag = np.zeros((totalItems, topK, groupNum))
+    itemFlag[:, :, 1] = 1  # inactive item
+    itemScore = [0 for index in range(totalItems)]
+    for index in range(totalItems):
+        itemScore[index] = np.mean(score[:, index])
+    activeItem = list(reversed(np.array(itemScore).argsort()))[0:int(totalItems * 0.05)]
+
+    for user in range(totalUsers):
+        for topK_index in range(topK):
+            if P[user][topK_index] in activeItem:
+                itemFlag[user][topK_index][0] = 1
+                itemFlag[user][topK_index][1] = 0
+
+    # —————>Ahelp：这个逻辑是：平等性破坏active和inactive的推荐列表质量的逻辑
+    # Ahelp=np.zeros((totalUsers,topK))
+    # for user in range(totalUsers):
+    #         if user in active_User:
+    #             Ahelp[user,top_k:2*top_k]=1
+    #         else:
+    #             Ahelp[user,0:top_k]=1
+    # 这个逻辑是：破坏 active 推荐质量，提高inactive 的推荐质量
+    Ahelp = np.zeros((totalUsers, topK))
+    Ahelp[:, top_k:] = 1
+
+    for i in range(totalUsers):
+        if UFlag[i][0] == 1:
+           u_λ= λ1
+        else:
+           u_λ = -λ1
+        for j in range(topK):
+            userFair = u_λ * Ahelp[i][j]
+
+            if itemFlag[i][j][0] == 1:
+                itemFair=-λ2
+            else:
+                itemFair= λ2
+            if fair_mode == "N":
+                W[i][j]+=score[i][int(P[i][j])] #线性综合指标
+            elif fair_mode == 'C':
+                W[i][j]+=score[i][int(P[i][j])] + userFair #线性综合指标
+            elif fair_mode == "P":
+                W[i][j] += score[i][int(P[i][j])] + itemFair  # 线性综合指标
+            elif fair_mode=='CP':
+                W[i][j] += score[i][int(P[i][j])] + userFair +itemFair # 线性综合指标
+
+    for i in range(totalUsers):
+        for item_topK_index in list(reversed(W[i].argsort()))[:top_k]:
+            W_result[i][item_topK_index ]=1 #悠哉悠哉地挑物品
+            itemgroup= 0 if itemFlag[i][item_topK_index][0]==1 else 1 #计算该物品对应的组
+            item_groups[itemgroup]+=1 #挑上物品，累积对应组的曝光获得量
+    for user in range(totalUsers):
+        selectedItemList=P[user][W_result[user]==1]
+        A[user]=selectedItemList
+    return A
 
 

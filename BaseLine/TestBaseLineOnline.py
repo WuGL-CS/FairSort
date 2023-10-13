@@ -121,5 +121,5 @@ def testBaseLineOnLine(DataSetName,BaseLineName,K,writer):
 
 
 if __name__ == '__main__':
-    writer=writeCsvTitleOnLine("ctrip","Random_k_Online")
-    testBaseLineOnLine("ctrip","Random_k_Online",20,writer)
+    writer=writeCsvTitleOnLine("amazon","Random_k_Online")
+    testBaseLineOnLine("amazon","Random_k_Online",20,writer)

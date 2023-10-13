@@ -67,7 +67,7 @@ def getData(DataSetName,K):
     # compute ProducerNameList[] & providerSize[]
     grouped_ticket = item_provider.groupby(([producerClassName]))
     for group_name, group_list in grouped_ticket:
-        providerNameList.append(group_name)
+        providerNameList.append(group_name[0])
         providerSizeList.append(len(group_list))
     if (DataSetName == "google"):
         m = user_number_google
@@ -106,6 +106,9 @@ def getData(DataSetName,K):
     item_ProducerNameList = item_provider[producerClassName]  # compute item_ProducerNameList=[]
     providerQualityList = Utils.load_variavle(
         filename="../datasets/Temp_Value/TFROM_" + DataSetName + "_provider_quality.pkl")
+
+
+
     # 1-providerSizeList
     # 2-providerQualityList
     # 3-providerNameList
@@ -116,6 +119,9 @@ def getData(DataSetName,K):
     # 8-item_ProducerNameList
     # 9-m
     #10-n
+    #11-UFlag:用户的分组情况
+    #12-itemFlag：物品的分组情况
+    #13-Ahelp：用户在训练数据集中已经看过的数据
     Data["providerSizeList"]=providerSizeList
     Data["providerQualityList"]=providerQualityList
     Data["providerNameList"]=providerNameList

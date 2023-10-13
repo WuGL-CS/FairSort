@@ -1,6 +1,5 @@
 import csv
 import math
-
 from FairSort_OffLine import FairSort_Utils as FairSortUtils
 import BaseLineUtils as baseLineUtils
 import BaseLineFunction as functions
@@ -17,6 +16,8 @@ def getRecomendationListOffLine(userList, BaseLineName,sorted_score,K,itemExposu
         recommendationList=functions.Mixed_k_Offline(userList,sorted_score,K)
     elif(BaseLineName=="Random_k_Offline"):
         recommendationList=functions.Random_k_Offline(userList,sorted_score,K)
+    elif(BaseLineName=="CP_Fair_Offline"):
+        recommendationList=functions.CP_Fair_Offline(score,sorted_score,K,50,2,len(userList),len(score[0]),"CP",0.5,0.5)
     return recommendationList
 def writeCsvTitleOffLine(DataSetName,BaseLineName):
     csvFile = open('Results/OffLine/' + DataSetName +
@@ -96,6 +97,6 @@ def testBaseLineOffLine(DataSetName,BaseLineName,K,writer):
     print("userSatisfaction:",userSatisfactionList)
 
 if __name__ == '__main__':
-    writer = writeCsvTitleOffLine("google", "Random_k_Offline")
+    writer = writeCsvTitleOffLine("google", "CP_Fair_Offline")
     for K in range(2,26):
-        testBaseLineOffLine("google","Random_k_Offline",K,writer)
+        testBaseLineOffLine("google","CP_Fair_Offline",K,writer)
