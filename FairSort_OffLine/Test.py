@@ -1,8 +1,8 @@
 import math
 # import random
 # import numpy as np
-# arr=[0 for x in range(3000)]
-# sum=30000
+# arr=[0 for x in range(4927)]
+# sum=4927
 # count=0
 # for index in range(3000):
 #     if (index == 2999 or sum<100):
@@ -42,4 +42,5 @@ y = [1, 4, 9, 16]
 plt.plot(x, y)
 plt.show()
 
+arry=[0 for index in range(4927)]
 
