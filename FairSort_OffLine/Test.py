@@ -36,11 +36,40 @@ import math
 
 import matplotlib.pyplot as plt
 
-x = [1, 2, 3, 4]
-y = [1, 4, 9, 16]
+import numpy as np
+import matplotlib.pyplot as plt
 
-plt.plot(x, y)
+# 定义函数 f(x)
+def f(x):
+    return 1 - np.exp(1 - x)
+
+# 定义函数 f'(x) - 导数
+def df(x):
+    return np.exp(1 - x)
+
+# 生成 x 值
+x = np.linspace(0, 1, 100)
+
+# 计算对应的 y 值
+y = f(x)
+dy = df(x)
+
+# 绘制函数 f(x) 和其导数 f'(x) 的图像
+plt.figure(figsize=(10, 5))
+plt.subplot(1, 2, 1)
+plt.plot(x, y, label='f(x) = 1 - e^{1-x}', color='blue')
+plt.title('f(x)')
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.grid(True)
+plt.legend()
+
+plt.subplot(1, 2, 2)
+plt.plot(x, dy, label="f'(x) = e^{1-x}", color='red')
+plt.title("f'(x)")
+plt.xlabel('x')
+plt.ylabel("f'(x)")
+plt.grid(True)
+plt.legend()
+
 plt.show()
-
-arry=[0 for index in range(4927)]
-

@@ -194,7 +194,7 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
     #计算index_ProducerNameList[] & providerSize[]
     grouped_ticket = item_ProducerList.groupby(([producerClassName]))
     for group_name, group_list in grouped_ticket:
-        index_ProducerNameList.append(group_name)
+        index_ProducerNameList.append(group_name[0])
         providerSize.append(len(group_list))
 
     provider_size_total = sum(providerSize)
@@ -234,11 +234,13 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
     # 计算每个提供商的曝光公平阈值——基于价值量
     fair_exposure = []
     if(fairRegulation==0):
+        provider_quality_sum=sum(provider_quality)
         for i in range(len(index_ProducerNameList)):
-            fair_exposure.append(total_exposure / sum(provider_quality) * provider_quality[i])
+            fair_exposure.append(total_exposure /provider_quality_sum  * provider_quality[i])
     elif(fairRegulation==1):
+        providerSize_sum=sum(providerSize)
         for i in range(len(index_ProducerNameList)):
-            fair_exposure.append(total_exposure / sum(providerSize) * providerSize[i])
+            fair_exposure.append(total_exposure /providerSize_sum  * providerSize[i])
     print("当前系统提供商如果公平，应得到的曝光值：",fair_exposure)
     userSatisfaction=[0 for i in range(len(userList))]#同于记录用户的满意度值
     #似乎忘记给producerFairExposure赋值
@@ -260,30 +262,30 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
     #有了公平性启发后的提升因子,进行二分搜索
         #有了提升因子，其实应该看其公平性怎样，再做计划的，但是我们先进行
         RecResult=FairSortForUser(user_temp,λ,FairLiftFactor,score,sorted_score,NDCG_low_bound,K,gap,ratio,item_ProducerNameList,index_ProducerNameList)
-        print("当前的曝光资源err方差值:"+str(result[1])+"提供商的公平性指标"+str(Utils.getVar(Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality)))+"获得推荐列表质量:"+str(RecResult[0]))
+        print("Current exposure error variance: "+str(result[1])+"  Provider_Fair_Index "+str(Utils.getVar(Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality)))+"  Recommended_List_Quality:"+str(RecResult[0]))
         userSatisfaction[user_temp]=RecResult[0]
-        print("当前用户: " + str(user_temp) +"获取到的提升因子: " +str(FairLiftFactor))
+        print("Current User: " + str(user_temp) +"  The Lift Factor List: " +str(FairLiftFactor))
         user_satisfactionTotal+=RecResult[0]
         ReRankList_userTemp = RecResult[1]
         #对曝光资源进行更新操作！将原有Top-k列表的曝光资源分配情况进行重新调整，牺牲一定的推荐质量，换取提供商公平
         refreshExposureAlloaction(producerExposure, ReRankList_userTemp, sorted_score,K,
                                   user_temp,item_ProducerNameList,index_ProducerNameList)
-        print("服务完用户："+str(user_temp)+"后,于当前资源与公平资源差额err：",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
+        print("Finished Service user："+str(user_temp)+" later,Error between producerExposure and fair_Exposure :",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
         if(count%10==0):
-            print("总共服务了"+str(count)+"个用户"+"提供商侧的公平性指标为:"+str(Utils.getVar(
+            print("Total service "+str(count)+" Users"+"  provider_Fair_Index :"+str(Utils.getVar(
             Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality))))
-            print("最终提供商侧的最终曝光资源分布为", producerExposure)
-            print("公平分配应该为：", fair_exposure)
-            print("误差为：",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
+            print("The final exposure resource distribution on the  provider_side is", producerExposure)
+            print("Fair distribution should be(Exposure For Every Provider)：", fair_exposure)
+            print("Error：",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
 #我们要对本轮算法进行结果分析:
-    print("算法结束了：")
-    print("Tok-K曝光资源分布为：", producerExposure_TopK)
-    print("最终提供商侧的最终曝光资源分布为",producerExposure)
-    print("公平分配应该为：",fair_exposure)
-    print("提供商一开始top-k价值转化率为：",Utils.getProducerExposurCoversionRate(producerExposure_TopK,fairRegulation,providerSize,provider_quality))
-    print("提供商侧的价值最终转化率分布为：",Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality))
-    print("一开始的Top-K的差额值:",Utils.getFairAndCurrentErr(producerExposure_TopK,fair_exposure))
-    print("FairSort的差额值:",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
+    print("The algorithm is over：")
+    print("Tok-K exposure resource distribution is：", producerExposure_TopK)
+    print("The final exposure resource distribution on the  provider_side is",producerExposure)
+    print("Fair distribution should be(Exposure For Every Provider)：",fair_exposure)
+    print("The provider's initial top-k Exposure_Quality conversion Rate is:：",Utils.getProducerExposurCoversionRate(producerExposure_TopK,fairRegulation,providerSize,provider_quality))
+    print("The final conversion Rate distribution on the provider side is：",Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality))
+    print("Error between producerExposure_TopK and fair_exposure",Utils.getFairAndCurrentErr(producerExposure_TopK,fair_exposure))
+    print("FairSort's error between producerExposure and fair_exposure :",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
     Utils.getSatisfactionDistribution(userSatisfaction)
     userSatisfaction_var=Utils.getVar(userSatisfaction)
     userSatisfaction_diverse=Utils.getDiverse(userSatisfaction)

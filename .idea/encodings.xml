@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/MyIdea/FairRankBYQuality.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/datasets/Temp_Value/TFROM_quality_weighted" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/datasets/results/result_google/FairSortQualityOff8_0.15_0.85.csv" charset="UTF-16" />
-    <file url="file://$PROJECT_DIR$/datasets/results/result_google/FairSortUniformOff8_0.15_0.85.csv" charset="GBK" />
-  </component>
-</project>

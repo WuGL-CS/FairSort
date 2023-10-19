@@ -97,6 +97,6 @@ def testBaseLineOffLine(DataSetName,BaseLineName,K,writer):
     print("userSatisfaction:",userSatisfactionList)
 
 if __name__ == '__main__':
-    writer = writeCsvTitleOffLine("google", "CP_Fair_Offline")
+    writer = writeCsvTitleOffLine("ctrip", "FairRecOffLine")
     for K in range(2,26):
-        testBaseLineOffLine("google","CP_Fair_Offline",K,writer)
+        testBaseLineOffLine("ctrip","FairRecOffLine",K,writer)

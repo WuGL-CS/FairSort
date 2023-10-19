@@ -30,6 +30,7 @@ if __name__ == '__main__':
     score = score[:m, :n]
     # 对分数矩阵进行归一化操作
     score = np.array(w_score.values)
+    score_true=np.copy(score)
     for index in range(len(score)):
         score[index] = (score[index] / (max(score[index]) * 1000))
 
@@ -42,14 +43,14 @@ if __name__ == '__main__':
     K=20
     λ=8
     ratio=0.2
-    low_bound=0.9
+    low_bound=0.85
     gap=1/64
     qualityOrUniform =0  # 公平诉求：0则为Quality  1 则为Uniform
     # save result analyze
     csvFile=Utils.SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform,λ,ratio,low_bound)
     writer=csv.writer(csvFile)
     t=time.time()
-    FairSort_Online.FairSortOnLine(λ,ratio,gap,low_bound,K,score,sorted_score,qualityOrUniform,user_Random,item_ProducerList,"provider",writer)
+    FairSort_Online.FairSortOnLine(λ,ratio,gap,low_bound,K,score,sorted_score,qualityOrUniform,user_Random,item_ProducerList,"provider",writer,score_truth=score_true)
     print(f'时间差:{time.time() - t:.3f}s')
     csvFile.close()
     print('Finished!')

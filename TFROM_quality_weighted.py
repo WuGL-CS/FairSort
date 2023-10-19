@@ -10,8 +10,7 @@ def getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize
     convertRate = []
     if (fairRegulation == 0):  # 这个是基于价值效益
         for index in range(len(producerExposure)):
-            convertRate.append((producerExposure[index] / max(producerExposure))
-                                / (provider_quality[index] / max(provider_quality)))
+            convertRate.append(producerExposure[index] / provider_quality[index]*1000)
         return convertRate
     elif (fairRegulation == 1):  # 这个是基于数量效益的
         for index in range(len(producerExposure)):
@@ -188,7 +187,7 @@ provider = []
 provider_size = []
 grouped_ticket = ticket_list.groupby((["airline"]))
 for group_name,group_list in grouped_ticket:
-    provider.append(group_name)
+    provider.append(group_name[0])
     provider_size.append(len(group_list))
 provider_size_total = sum(provider_size)
 

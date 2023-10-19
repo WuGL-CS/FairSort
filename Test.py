@@ -56,3 +56,10 @@
 #         #score：—————>itemFlag：
 #
 #
+import  numpy as np
+score = np.array([[1.0,1.0],[1.0,1.0]])
+score_true=np.copy(score)
+for index in range(len(score)):
+    score[index] = (score[index] / (max(score[index]) * 1000))
+print(score)
+print(score_true)

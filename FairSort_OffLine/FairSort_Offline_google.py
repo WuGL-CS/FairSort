@@ -43,7 +43,7 @@ if __name__ == '__main__':
         # hyperParameter
     λ = 8
     ratio = 0.15
-    low_bound = 0.95
+    low_bound = 0.9
     gap = 1/64
     qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
     userList = [i for i in range(m)]  # userList的构造

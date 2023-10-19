@@ -48,12 +48,12 @@ if __name__ == '__main__':
     user_number_google = 3335
     provider_num_google = 4927
 
-    m = user_number_google
-    n = item_number_google
-    provider_num = provider_num_google
+    m = user_number_amazon
+    n = item_number_amazon
+    provider_num = provider_num_amazon
 
     k = 25
-    dataset_name = 'google'
+    dataset_name = 'amazon'
     score_file = '/preference_score.csv'
     item_file = '/item_provider.csv'
 
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     #         provider_quality[provider_temp] += score[user_temp][item_temp]
     #     print('provider_quality: %d' % (user_temp))
     # save_value(provider_quality,"datasets/Temp_Value/TFROM_amazon_provider_quality.pkl")
-    provider_quality=load_variavle("datasets/Temp_Value/TFROM_google_provider_quality.pkl")
+    provider_quality=load_variavle(f"datasets/Temp_Value/TFROM_{dataset_name}_provider_quality.pkl")
     for k_temp in range(2, k+1):
         ideal_score = [0 for i in range(m)]
 
@@ -163,8 +163,8 @@ if __name__ == '__main__':
                         if provider_exposure_score[provider_temp] < min_exposure:
                             next_item = item_temp
                             next_provider = provider_temp
-                            #min值依旧忘记更新啊！！！！！
-                            min_exposure = provider_exposure_score[provider_temp]  # 这有一处错误：没有更新min_exposure的值
+                            #原有作者  对min值依旧忘记更新啊！！！！！
+                            min_exposure = provider_exposure_score[provider_temp]  # 作者这有一处错误：没有更新min_exposure的值
                     rec_result[next_user][top_k] = next_item
                     user_satisfaction[next_user] += \
                         score[next_user][next_item] / math.log((top_k + 2), 2) / ideal_score[next_user]
@@ -187,8 +187,7 @@ if __name__ == '__main__':
         for i in range(provider_num):
             item_id = int(np.argwhere(item_provider[:, 1] == i)[0])
             avg_provider_exposure_score.append(provider_exposure_score[i] / item_provider[item_id][2])
-            provider_exposure_quality.append((provider_exposure_score[i] / max(provider_exposure_score))
-                                             / (provider_quality[i] / max(provider_quality)))
+            provider_exposure_quality.append((provider_exposure_score[i]  / provider_quality[i])*1000 )
         avg_exposure_score = sum(avg_provider_exposure_score) / provider_num
         avg_provider_exposure_quality = sum(provider_exposure_quality) / provider_num
 

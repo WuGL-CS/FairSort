@@ -37,7 +37,7 @@ provider = []
 provider_size = []
 grouped_ticket = ticket_list.groupby((["airline"]))
 for group_name,group_list in grouped_ticket:
-    provider.append(group_name)
+    provider.append(group_name[0])
     provider_size.append(len(group_list))
 
 
@@ -81,6 +81,7 @@ for round_temp in range(total_round):
         provider_name_temp = ticket_list['airline'][item_temp]
         provider_temp = provider.index(provider_name_temp)
         provider_quality[provider_temp] += score[next_user][item_temp]
+
 
     total_exposure = 0
     for i in range(k):
@@ -129,8 +130,7 @@ for round_temp in range(total_round):
     provider_exposure_quality = []
     for i in range(len(provider)):
         avg_provider_exposure_score.append(provider_exposure_score[i] / provider_size[i])
-        provider_exposure_quality.append((provider_exposure_score[i] / max(provider_exposure_score))
-                                         / (provider_quality[i] / max(provider_quality)))
+        provider_exposure_quality.append(provider_exposure_score[i] / provider_quality[i]*1000 )
     avg_exposure_score = sum(avg_provider_exposure_score) / len(provider)
     avg_provider_exposure_quality = sum(provider_exposure_quality) / len(provider)
 

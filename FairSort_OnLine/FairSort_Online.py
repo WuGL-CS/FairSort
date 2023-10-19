@@ -106,7 +106,7 @@ def getFairliftFactorAndVar_Rate1(producerExposure_TopK, fair_exposure,fairRegul
     return FairliftFactor
 
 def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUniform,\
-                    user_Random,item_ProducerList,producerClassName,writer):
+                    user_Random,item_ProducerList,producerClassName,writer,score_truth):
     m=len(score) #user_Num
     n=len(score[0])#item_Num
     UserIDCGList=[0 for x in range(m)]#计算用户的IDCG值
@@ -125,7 +125,7 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
     # 计算index_ProducerNameList[] & providerSize[]
     grouped_ticket = item_ProducerList.groupby(([producerClassName]))
     for group_name, group_list in grouped_ticket:
-        index_ProducerNameList.append(group_name)
+        index_ProducerNameList.append(group_name[0])
         provider_SizeList.append(len(group_list))
     #初始化satisDistributeList
     satisDistributeList=[0 for x in range(9)]
@@ -153,8 +153,8 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
                 item_temp = sorted_score[userTemp][rank_temp]
                 provider_name_temp = item_ProducerList[producerClassName][item_temp]
                 provider_temp = index_ProducerNameList.index(provider_name_temp)
-                producer_qualityList[provider_temp] += score[userTemp][item_temp]
-                producerQualitySum+=score[userTemp][item_temp]
+                producer_qualityList[provider_temp] += score_truth[userTemp][item_temp]
+                producerQualitySum+=score_truth[userTemp][item_temp]
 
                 #Equals+<===>
                 # itemScore=score[userTemp][rank_temp]

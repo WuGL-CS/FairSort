@@ -16,7 +16,7 @@ def load_variavle(filename):
         return ""
 def SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bound):
     fairType=""
-    if qualityOrUniform==0:fairType="Quality"
+    if qualityOrUniform==0:fairType="Quality_New"
     elif(qualityOrUniform==1):fairType="Uniform"
     fileName="/FairSort"+fairType+"Off"+str(λ)+"_"+str(ratio)+"_"+str(low_bound)+".csv"
     csvFile = open("../datasets/results/result_" + dataset_name+ fileName
@@ -49,7 +49,7 @@ def SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bou
 
 def SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform,λ,ratio,low_bound):
     fairType=""
-    if qualityOrUniform==0:fairType="Quality"
+    if qualityOrUniform==0:fairType="Quality_New"
     elif(qualityOrUniform==1):fairType="Uniform"
     fileName="/FairSort"+fairType+"On"+str(λ)+"_"+str(ratio)+"_"+str(low_bound)+".csv"
     csvFile = open("../datasets/results/result_" + dataset_name+ "/FairSortOnLine"+fileName
@@ -82,8 +82,7 @@ def getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize
     convertRate = []
     if (fairRegulation == 0):  # 这个是基于价值效益
         for index in range(len(producerExposure)):
-            convertRate.append((producerExposure[index] / max(producerExposure))
-                                / (provider_quality[index] / max(provider_quality)))
+            convertRate.append(producerExposure[index]/provider_quality[index] *1000)
         return convertRate
     elif (fairRegulation == 1):  # 这个是基于数量效益的
         for index in range(len(producerExposure)):

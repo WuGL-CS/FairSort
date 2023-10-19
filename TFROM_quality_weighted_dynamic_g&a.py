@@ -14,13 +14,13 @@ item_number_google = 4927
 user_number_google = 3335
 provider_num_google = 4927
 
-m = user_number_google
-n = item_number_google
-provider_num = provider_num_google
+m = user_number_amazon
+n = item_number_amazon
+provider_num = provider_num_amazon
 
 k = 20
 total_round = 10 * m
-dataset_name = 'google'
+dataset_name = 'amazon'
 score_file = '/preference_score.csv'
 item_file = '/item_provider.csv'
 
@@ -126,8 +126,7 @@ for round_temp in range(total_round):
     for i in range(provider_num):
         item_id = int(np.argwhere(item_provider[:, 1] == i)[0])
         avg_provider_exposure_score.append(provider_exposure_score[i] / item_provider[item_id][2])
-        provider_exposure_quality.append((provider_exposure_score[i] / max(provider_exposure_score))
-                                         / (provider_quality[i] / max(provider_quality)))
+        provider_exposure_quality.append(provider_exposure_score[i] / provider_quality[i]*1000 )
     avg_exposure_score = sum(avg_provider_exposure_score) / provider_num
     avg_provider_exposure_quality = sum(provider_exposure_quality) / provider_num
 

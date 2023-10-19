@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TFROM_A Two-sided Fairness-Aware Recommendation Model for Both Customers and Providers.iml" filepath="$PROJECT_DIR$/.idea/TFROM_A Two-sided Fairness-Aware Recommendation Model for Both Customers and Providers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FairSort.iml" filepath="$PROJECT_DIR$/.idea/FairSort.iml" />
     </modules>
   </component>
 </project>
