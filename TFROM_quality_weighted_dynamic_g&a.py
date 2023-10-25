@@ -14,13 +14,13 @@ item_number_google = 4927
 user_number_google = 3335
 provider_num_google = 4927
 
-m = user_number_amazon
-n = item_number_amazon
-provider_num = provider_num_amazon
+m = user_number_google
+n = item_number_google
+provider_num = provider_num_google
 
 k = 20
 total_round = 10 * m
-dataset_name = 'amazon'
+dataset_name = 'google'
 score_file = '/preference_score.csv'
 item_file = '/item_provider.csv'
 
@@ -64,6 +64,8 @@ provider_exposure_score = [0 for i in range(provider_num)]
 provider_quality = [0 for i in range(provider_num)]
 satisDistributeList=[0 for x in range(9)]
 ideal_score = [0 for i in range(m)]
+provider_quality= Utils.load_variavle(filename="datasets/Temp_Value/TFROM_"+dataset_name+"_provider_quality.pkl")
+provider_qualitySum=sum(provider_quality)
 for user_temp in range(m):
     for rank_temp in range(k):
         item_temp = sorted_score[user_temp][rank_temp]
@@ -75,10 +77,7 @@ for round_temp in range(total_round):
     user_satisfaction_temp = 0
     rec_result = [-1 for i in range(k)]
 
-    for rank_temp in range(n):
-        item_temp = sorted_score[next_user][rank_temp]
-        provider_temp = item_provider[item_temp][1]
-        provider_quality[provider_temp] += score[next_user][item_temp]
+
 
     total_exposure = 0
     for i in range(k):
@@ -86,7 +85,7 @@ for round_temp in range(total_round):
     total_exposure = total_exposure * (round_temp + 1)
 
     fair_exposure = []
-    provider_qualitySum=sum(provider_quality)
+
     for i in range(provider_num):
         fair_exposure.append(total_exposure / provider_qualitySum * provider_quality[i])
 

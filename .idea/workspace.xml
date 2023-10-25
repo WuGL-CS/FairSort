@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码">
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Amazon.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Amazon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Amazon.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Amazon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Ctrip.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Ctrip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Google.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_quality_weighted.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_quality_weighted.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_quality_weighted_dynamic.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_quality_weighted_dynamic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_quality_weighted_dynamic_g&amp;a.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_quality_weighted_dynamic_g&amp;a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_uniform.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_uniform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQualityOn1_0.1_0.95.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQualityOn8_1_0.9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_analyze_TFORM_Quality_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_quality.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_analyze_TFROM_Uniform_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_Uniform.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortQualityOn8_0.2_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortQuality_NewOn8_0.2_0.85.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortQuality_NewOn8_0.2_0.85.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2Wo7XJA41WsSV4srewx456mxsPH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/FairSort/BaseLine/Results/OnLine/ctrip/Top_K_Online.csv&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;PyScientificConfigurable&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Administrator/Desktop/FairSort/BaseLine/Results/OnLine/ctrip/Top_K_Online.csv&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python.ResultAnalysis_OnLine">
+    <configuration name="FairSort_Online_Ctrip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Ctrip.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FairSort_Online_Google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Google.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MCPFairResultAnalysis_Offline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ResultAnalysis_OffLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ResultAnalysis_OnLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.ResultAnalysis_OnLine" />
+        <item itemvalue="Python.ResultAnalysis_OffLine" />
+        <item itemvalue="Python.MCPFairResultAnalysis_Offline" />
+        <item itemvalue="Python.FairSort_Online_Ctrip" />
+        <item itemvalue="Python.FairSort_Online_Google" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="" />
+      <created>1697387117078</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697387117078</updated>
+      <workItem from="1697387120693" duration="7732000" />
+      <workItem from="1697439010375" duration="42393000" />
+      <workItem from="1697953450640" duration="47860000" />
+    </task>
+    <task id="LOCAL-00001" summary="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码">
+      <option name="closed" value="true" />
+      <created>1697702367981</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697702367981</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py</url>
+          <line>66</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FairSort$TestBaseLineOnline.coverage" NAME="TestBaseLineOnline Coverage Results" MODIFIED="1697618515172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BaseLine" />
+    <SUITE FILE_PATH="coverage/FairSort$TFROM_quality_weighted_dynamic_g_a.coverage" NAME="TFROM_quality_weighted_dynamic_g&amp;a Coverage Results" MODIFIED="1697618236513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Amazon.coverage" NAME="FairSort_Online_Amazon Coverage Results" MODIFIED="1697633587291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
+    <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Ctrip.coverage" NAME="FairSort_Online_Ctrip Coverage Results" MODIFIED="1697697347642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
+    <SUITE FILE_PATH="coverage/FairSort$MCPFairResultAnalysis_Offline.coverage" NAME="MCPFairResultAnalysis_Offline Coverage Results" MODIFIED="1698203499627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+    <SUITE FILE_PATH="coverage/FairSort$FairSort_Offline_google.coverage" NAME="FairSort_Offline_google Coverage Results" MODIFIED="1697458130289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+    <SUITE FILE_PATH="coverage/FairSort$TestBaseLineOffLine.coverage" NAME="TestBaseLineOffLine Coverage Results" MODIFIED="1697443914282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BaseLine" />
+    <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Google.coverage" NAME="FairSort_Online_Google Coverage Results" MODIFIED="1697634107424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
+    <SUITE FILE_PATH="coverage/FairSort$TFROM_quality_weighted_g_a.coverage" NAME="TFROM_quality_weighted_g&amp;a Coverage Results" MODIFIED="1697453377678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FairSort$Test.coverage" NAME="Test Coverage Results" MODIFIED="1697464044536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+    <SUITE FILE_PATH="coverage/FairSort$ResultAnalysis_OffLine.coverage" NAME="ResultAnalysis_OffLine Coverage Results" MODIFIED="1698229451989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+    <SUITE FILE_PATH="coverage/FairSort$ResultAnalysis_OnLine.coverage" NAME="ResultAnalysis_OnLine Coverage Results" MODIFIED="1698242837525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
+    <SUITE FILE_PATH="coverage/FairSort$FairSort_Offline_Amazon.coverage" NAME="FairSort_Offline_Amazon Coverage Results" MODIFIED="1697454976624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+  </component>
+</project>

@@ -193,7 +193,7 @@ provider_size_total = sum(provider_size)
 
 # save result analyze
 csvFile = open('datasets/results/result_' + dataset_name
-               + '/TFROM/result_analyze_TFORM_Quality_Offline.csv', 'w', newline='')
+               + '/TFROM/result_quality.csv', 'w', newline='')
 writer = csv.writer(csvFile)
 title = []
 title.append('k')

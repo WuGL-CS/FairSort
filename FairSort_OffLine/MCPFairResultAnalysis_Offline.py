@@ -3,6 +3,7 @@ import math
 import numpy as np
 import  pandas as pd
 import matplotlib.pyplot as plt
+import ResultAnalysis_OffLine
 class DraggableLegend:
     def __init__(self, legend):
         self.legend = legend
@@ -59,7 +60,7 @@ def MCPFDevieQuality_Offline(BestResultFilePath,Y_indexNameList,λList,X_bottom,
     return X, Y_dict
 
 
-def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize):
+def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize,filePath):
     fig, ax = plt.subplots(figsize=(X_len, Y_len), layout='constrained')
     for modelName, Y in Y_dict.items():
         if (modelName=="Minimum_Exposure"):
@@ -82,13 +83,13 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
             ax.plot(X, Y, label=modelName, linestyle=':', marker=">", markersize=markersize, color="orange",lw=linewidth)  # Plot more data on the axes...
         elif (modelName=="CP_Fair"):
             ax.plot(X,Y,label=modelName, linestyle=':', marker=marker,markersize=markersize, color="red",lw=linewidth)   # Plot more data on the axes...
-    ax.set_xlabel(x_label, fontsize="24")  # Add an x-label to the axes.
-    ax.set_ylabel(y_label, fontsize="24")  # Add a y-label to the axes.
+    ax.set_xlabel(x_label, fontsize="40")  # Add an x-label to the axes.
+    ax.set_ylabel(y_label, fontsize="32")  # Add a y-label to the axes.
     ax.set_title(title)  # Add a title to the axes.
     DraggableLegend(ax.legend(fontsize="22")) # Add a legend.
     plt.legend().set_visible(False)
     ax.grid(True)
-
+    plt.savefig(filePath)
     font2 = {'family': 'Times New Roman',
              'weight': 'normal',
              'size': 12,
@@ -107,8 +108,8 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
     plt.show()
 
 
-linewidth=4
-markersize=18
+linewidth=5
+markersize=19
 
 
 user_number_ctrip = 3814
@@ -120,9 +121,9 @@ user_number_amazon = 1851
 #Google [MCPF/averageQualit] of Quality_Weighted
 #
 # BestResultFilePath={}
-# BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/google/minimumExposure_OffLine.csv"
+# # BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/google/minimumExposure_OffLine.csv"
 # BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/google/Top_K_Offline.csv"
-# BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/google/Random_k_Offline.csv"
+# # BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/google/Random_k_Offline.csv"
 # # BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/google/Mixed_k_OffLine.csv"
 # BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/google/FairRecOffLine.csv"
 # BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/google/CP_Fair_Offline.csv"
@@ -132,23 +133,23 @@ user_number_amazon = 1851
 #
 #
 # result=MCPFDevieQuality_Offline(BestResultFilePath,["exposure_quality_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_google)
-# paint(result[0],result[1],"",5.8,3.2,"K","MCPF","*",linewidth,markersize)
+# paint(result[0],result[1],"",5.8,3.2,"K","UIR","*",linewidth,markersize)
 
 
 # #Amazon [MCPF/averageQualit] of Quality_Weighted
 
 # BestResultFilePath={}
-# BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/amazon/minimumExposure_OffLine.csv"
+# # BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/amazon/minimumExposure_OffLine.csv"
 # BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/amazon/Top_K_Offline.csv"
-# BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/amazon/Random_k_Offline.csv"
-# BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/amazon/Mixed_k_OffLine.csv"
+# # BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/amazon/Random_k_Offline.csv"
+# # BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/amazon/Mixed_k_OffLine.csv"
 # BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/amazon/FairRecOffLine.csv"
-# BestResultFilePath["FairSort_offline_Quality_Weighted"]="../datasets/results/result_amazon/FairSortQuality_NewOff32_0.1_0.9.csv"
 # BestResultFilePath["TFROM_offline_Quality_Weighted"]="../datasets/results/result_amazon/TFROM/result_quality.csv"
+# BestResultFilePath["FairSort_offline_Quality_Weighted"]="../datasets/results/result_amazon/FairSortQuality_NewOff32_0.1_0.9.csv"
 # BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/amazon/CP_Fair_Offline.csv"
 #
 # result=MCPFDevieQuality_Offline(BestResultFilePath,["exposure_quality_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_amazon)
-# paint(result[0],result[1],"",5.8,3.2,"K","MCPF/averageQuality","*",linewidth,markersize)
+# paint(result[0],result[1],"",5.8,3.2,"K","UIR","*",linewidth,markersize)
 
 # #Ctrip [MCPF/averageQualit] of Quality_Weighted
 
@@ -156,62 +157,93 @@ user_number_amazon = 1851
 # BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/ctrip/Top_K_Offline.csv"
 # # BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/ctrip/minimumExposure_OffLine.csv"
 # # BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/ctrip/Random_k_Offline.csv"
-# BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/ctrip/Mixed_k_OffLine.csv"
-# # BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv"
+# # BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/ctrip/Mixed_k_OffLine.csv"
+# BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv"
 # BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/ctrip/CP_Fair_Offline.csv"
-# BestResultFilePath["TFROM_offline_Quality_Weighted"]="../datasets/results/result_ctrip/TFROM/result_analyze_TFORM_Quality_Offline.csv"
+# BestResultFilePath["TFROM_offline_Quality_Weighted"]="../datasets/results/result_ctrip/TFROM/result_quality.csv"
 # BestResultFilePath["FairSort_offline_Quality_Weighted"]="../datasets/results/result_ctrip/FairSortQuality_NewOff16_1_0.9.csv"
 #
 # result=MCPFDevieQuality_Offline(BestResultFilePath,["exposure_quality_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_ctrip)
-# paint(result[0],result[1],"",5.8,3.2,"K","MCPF/averageQuality","*",linewidth,markersize)
+# paint(result[0],result[1],"",5.8,3.2,"K","UIR","*",linewidth,markersize)
 
 
 
 #Google [MCPF/averageQualit] of Uniform_Weighted
 
 
-BestResultFilePath={}
-BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/google/minimumExposure_OffLine.csv"
-BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/google/Top_K_Offline.csv"
-# BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/google/Random_k_Offline.csv"
-# BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/google/Mixed_k_OffLine.csv"
+# BestResultFilePath={}
+# # BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/google/minimumExposure_OffLine.csv"
+# BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/google/Top_K_Offline.csv"
+# # BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/google/Random_k_Offline.csv"
+# # BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/google/Mixed_k_OffLine.csv"
 # BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/google/CP_Fair_Offline.csv"
 # BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/google/FairRecOffLine.csv"
-# BestResultFilePath["TFROM_offline_Quality_Weighted"]="../datasets/results/result_google/TFROM/result_quality.csv"
-BestResultFilePath["TFROM_offline_Uniform"]="../datasets/results/result_google/TFROM/result_Uniform.csv"
-BestResultFilePath["FairSort_offline_Uniform"]="../datasets/results/result_google/FairSortUniformOff8_0.15_0.85.csv"
-# BestResultFilePath["FairSort_offline_Quality_Weighted"]="../datasets/results/result_google/FairSortQualityOff8_0.15_0.85.csv"
-
-result=MCPFDevieQuality_Offline(BestResultFilePath,["exposure_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_google)
-paint(result[0],result[1],"",5.8,3.2,"K","MCPF","*",linewidth,markersize)
-
+# # BestResultFilePath["TFROM_offline_Quality_Weighted"]="../datasets/results/result_google/TFROM/result_quality.csv"
+# BestResultFilePath["TFROM_offline_Uniform"]="../datasets/results/result_google/TFROM/result_Uniform.csv"
+# BestResultFilePath["FairSort_offline_Uniform"]="../datasets/results/result_google/FairSortUniformOff8_0.15_0.85.csv"
+# # BestResultFilePath["FairSort_offline_Quality_Weighted"]="../datasets/results/result_google/FairSortQualityOff8_0.15_0.85.csv"
+#
+# result=MCPFDevieQuality_Offline(BestResultFilePath,["exposure_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_google)
+# paint(result[0],result[1],"",5.8,3.2,"K","UIR","*",linewidth,markersize)
+#
 
 #Amazon [MCPF/averageQualit] of Uniform_Weighted
 
 
 # BestResultFilePath={}
-# BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/amazon/minimumExposure_OffLine.csv"
+# # BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/amazon/minimumExposure_OffLine.csv"
 # BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/amazon/Top_K_Offline.csv"
 # # BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/amazon/Random_k_Offline.csv"
 # # BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/amazon/Mixed_k_OffLine.csv"
-# # BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/amazon/FairRecOffLine.csv"
+# BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/amazon/FairRecOffLine.csv"
 # BestResultFilePath["TFROM_offline_Uniform"]="../datasets/results/result_amazon/TFROM/result_Uniform.csv"
 # BestResultFilePath["FairSort_offline_Uniform"]="../datasets/results/result_amazon/FairSortUniformOff8_0.1_0.95.csv"
-# # BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/amazon/CP_Fair_Offline.csv"
+# BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/amazon/CP_Fair_Offline.csv"
 #
 # result = MCPFDevieQuality_Offline(BestResultFilePath,["exposure_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_amazon)
-# paint(result[0],result[1],"",5.8,3.2,"K","MCPF","*",linewidth,markersize)
+# paint(result[0],result[1],"",5.8,3.2,"K","UIR","*",linewidth,markersize)
 
-
+#
 # BestResultFilePath={}
-# # BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/ctrip/Top_K_Offline.csv"
-# BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/ctrip/minimumExposure_OffLine.csv"
+# BestResultFilePath["Top-K"]="../BaseLine/Results/OffLine/ctrip/Top_K_Offline.csv"
+# # BestResultFilePath["Minimum_Exposure"]="../BaseLine/Results/OffLine/ctrip/minimumExposure_OffLine.csv"
 # # BestResultFilePath["All_Random"]="../BaseLine/Results/OffLine/ctrip/Random_k_Offline.csv"
 # # BestResultFilePath["Mixed-k"]="../BaseLine/Results/OffLine/ctrip/Mixed_k_OffLine.csv"
-# # BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/ctrip/CP_Fair_Offline.csv"
-# # BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv"
-# BestResultFilePath["TFROM_offline_Uniform"]="../datasets/results/result_ctrip/TFROM/result_analyze_TFROM_Uniform_Offline.csv"
+# BestResultFilePath["CP_Fair"]="../BaseLine/Results/OffLine/ctrip/CP_Fair_Offline.csv"
+# BestResultFilePath["Fair_Rec"]="../BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv"
+# BestResultFilePath["TFROM_offline_Uniform"]="../datasets/results/result_ctrip/TFROM/result_Uniform.csv"
 # BestResultFilePath["FairSort_offline_Uniform"]="../datasets/results/result_ctrip/FairSortUniformOff_16_1_0.85.csv"
 #
 # result = MCPFDevieQuality_Offline(BestResultFilePath,["exposure_var","satisfaction_var"],[0.5,0.5],2,26,"satisfaction_total",user_number_ctrip)
-# paint(result[0],result[1],"",5.8,3.2,"K","MCPF","*",linewidth,markersize)
+# paint(result[0],result[1],"",5.8,3.2,"K","UIR","*",linewidth,markersize)
+
+#UIR OF Variance of the ratio of exposure and relevance
+
+def getResults(FairnessType,filePathBase,y_len=19.2,x_len=10.8):
+    if FairnessType == 0:
+        metrix="Exposure_quality_var"
+        metrixType = "exposure_quality_var"
+        filePathBase += "//Quality_Weighted_Fairness//"
+    elif FairnessType == 1:
+        metrix="Variance of exposure"
+        metrixType="exposure_var"
+        filePathBase += "//Uniform_Weighted_Fairness//"
+    Datasets=["amazon","ctrip","google"]
+    # metrix=["Total recommendation quality","Vairance of NDCG","Variance of exposure", "Exposure_quality_var"]
+    for dataset in Datasets:
+        path=filePathBase+f"{dataset.title()}_Offline_UIR.pdf"
+        Models=ResultAnalysis_OffLine.getModels(metrix,dataset)
+        if FairnessType==1:
+            Models.pop("Minimum_Exposure") # because it loss too many Recommendation Quality
+            Models.pop("All_Random")# because it loss too many Recommendation Quality
+        result = MCPFDevieQuality_Offline(Models, [metrixType, "satisfaction_var"], [0.5, 0.5], 2, 26,
+                                          "satisfaction_total", user_number_amazon)
+        paint(result[0],result[1],"",x_len,y_len,"K","UIR","*",linewidth,markersize,path)
+
+
+if __name__ == '__main__':
+    linewidth = 5
+    markersize = 19
+    FairnessType=0 # Uniform Weighted =1   Quality Weighted=0
+    filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\\Offline_Pig_UIR"
+    getResults(FairnessType,filePathBase,10.8,19.2)

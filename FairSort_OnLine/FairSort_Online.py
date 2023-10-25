@@ -62,13 +62,13 @@ def FairSortForUser(user_temp, λ,userIDCG, F,score, sorted_score, NDCG_low_boun
             right = λ_temp
         else:
             left = λ_temp
-    print("当前：" + str(user_temp) + "二分查找了" + str(count) + "次")
+    print("Current：" + str(user_temp) + " BinarySearch " + str(count) + " times")
     if( not equalBoolean ):
         # target_λ=(left+right)/2
         target_λ=left
         # target_λ=right
     #再将搜到的target_λ进行重新排序，并返回NDCG值
-    print("当前用户："+str(user_temp)+"确定的λ大小为："+str(target_λ))
+    print("Curent user："+str(user_temp)+" determine λ ： "+str(target_λ))
     ReSort_NDCG = getReSortNDCG(score, target_λ, F,userIDCG,user_temp,ReRankList,item_num,K,item_ProducerNameList,index_ProducerNameList)
     return (ReSort_NDCG,ReRankList[:K])
 
@@ -106,7 +106,7 @@ def getFairliftFactorAndVar_Rate1(producerExposure_TopK, fair_exposure,fairRegul
     return FairliftFactor
 
 def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUniform,\
-                    user_Random,item_ProducerList,producerClassName,writer,score_truth):
+                    user_Random,item_ProducerList,producerClassName,writer,dataSetName):
     m=len(score) #user_Num
     n=len(score[0])#item_Num
     UserIDCGList=[0 for x in range(m)]#计算用户的IDCG值
@@ -132,6 +132,7 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
 
     #初始化producer_qualityList:
     producer_qualityList=[0 for x in range(len(index_ProducerNameList))]
+    producer_qualityList = Utils.load_variavle(filename="../datasets/Temp_Value/TFROM_"+dataSetName+"_provider_quality.pkl")
 
     #初始化Fair_ExposureList and producerExposureList
     Fair_ExposureList=[0 for x in range(len(index_ProducerNameList))]
@@ -142,19 +143,13 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
     userRecomendTimeList=[0 for x in range(m)]#用户被推荐次数列表
     satisfactionTotal=0 #推荐列表的满意度总和
 
-    producerQualitySum=0
+    producerQualitySum=sum(producer_qualityList)
     #算法开始：
     for round_temp in range(len(user_Random)):
-        print("当前第"+str(round_temp)+"个用户请求到达:")
+        print("The curent user ： "+str(round_temp)+" request Recommendation:")
         userTemp=user_Random[round_temp]
         userIDCG=UserIDCGList[userTemp]
-        if(qualityOrUniform==0):#价值
-            for rank_temp in range(n):
-                item_temp = sorted_score[userTemp][rank_temp]
-                provider_name_temp = item_ProducerList[producerClassName][item_temp]
-                provider_temp = index_ProducerNameList.index(provider_name_temp)
-                producer_qualityList[provider_temp] += score_truth[userTemp][item_temp]
-                producerQualitySum+=score_truth[userTemp][item_temp]
+
 
                 #Equals+<===>
                 # itemScore=score[userTemp][rank_temp]
@@ -180,7 +175,7 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         result=FairSortForUser(userTemp,λ,userIDCG,liftFactor,score,sorted_score,NDCG_LowBound,K,gap,ratio,item_ProducerNameList,index_ProducerNameList)
         userSatisTemp=result[0] #用户获得的推荐列表质量
         reRankList=result[1]#重新排序的列表
-        print("当前用户："+str(userTemp)+",获得推荐列表NDCG：=========>"+str(result[0]))
+        print("Current user ："+str(userTemp)+",get the recommendation List NDCG ： =========>"+str(result[0]))
         #重新分配资源：
         refreshExposureAlloaction(producerExposureList,reRankList,sorted_score,K,userTemp,item_ProducerNameList,index_ProducerNameList)
         Utils.getSatisfactionDistribution2(userSatisTemp, satisDistributeList)
@@ -208,19 +203,20 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         if (qualityOrUniform == 1):
             temp=np.var(provider_exposure_num_rate)
             row.append(temp)
-            print("******公平性指标******：", temp)
+            print("******FairNess  Index******：", temp)
             row.append(diverse_exposure_score)
         if(qualityOrUniform == 0):
             temp=np.var(provider_exposure_quality_rate)
             row.append(temp)
-            print("******公平性指标******：", temp)
+            print("******FairNess  Index******：", temp)
             row.append(divers_exposure_quality)
         row.append(satisDistributeList)
-        print("NDCG分布:",satisDistributeList)
-        print("提升因子:",liftFactor)
-        print("曝光资源公平分配值:",Fair_ExposureList)
-        print("提供商当前拥有的曝光资源:",producerExposureList)
-        print("曝光分配差额值:",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
+        if (round_temp%100==0):
+            print("NDCG Distribution: ",satisDistributeList)
+            print("Lift Factor: ",liftFactor)
+            print("Fair Exposure Distribution: ",Fair_ExposureList)
+            print("Current provider Exposure Distribution: ",producerExposureList)
+            print("Error Between Fair Distribution and Current provider Exposure Distribution:",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
         if(qualityOrUniform==1):
             if(len(provider_exposure_num_rate)<1000):
                 row.append(provider_exposure_num_rate)
@@ -228,11 +224,11 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
             if(len(provider_exposure_quality_rate)<1000):
                 row.append(provider_exposure_quality_rate)
         if(round_temp==len(user_Random)-1):
-            print("算法结束了：")
-            print("提供商的最终公平曝光值应为：",Fair_ExposureList)
-            print("提供商最终的曝光资源分配值为：",producerExposureList)
-            print("曝光资源差额值为:",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
-            print("转化率分布为:",Utils.getProducerExposurCoversionRate(producerExposureList,qualityOrUniform,provider_SizeList,producer_qualityList))
+            print("Final procesion：")
+            print("Final provider's Fair Exposure Distribution: ",Fair_ExposureList)
+            print("Final provider's Exposure Distribution:：",producerExposureList)
+            print("Fianl Error Between Fair Distribution and Current provider Exposure Distribution::",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
+            print("Coversation Rate Distribution: ",Utils.getProducerExposurCoversionRate(producerExposureList,qualityOrUniform,provider_SizeList,producer_qualityList))
         writer.writerow(row)
 if __name__ == '__main__':
     pass
