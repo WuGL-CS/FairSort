@@ -63,3 +63,5 @@ for index in range(len(score)):
     score[index] = (score[index] / (max(score[index]) * 1000))
 print(score)
 print(score_true)
+
+#asda
