@@ -104,8 +104,8 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
               fancybox=True, shadow=True, ncol=5, prop=font2)
     # hide the axes frame and the x/y labels
     ax_leg.axis('off')
-    plt.show()
-    plt.show()
+    # plt.show()
+    # plt.show()
 
 
 linewidth=5
@@ -219,7 +219,7 @@ user_number_amazon = 1851
 
 #UIR OF Variance of the ratio of exposure and relevance
 
-def getResults(FairnessType,filePathBase,y_len=19.2,x_len=10.8):
+def getResults(FairnessType,filePathBase,λList,y_len=19.2,x_len=10.8):
     if FairnessType == 0:
         metrix="Exposure_quality_var"
         metrixType = "exposure_quality_var"
@@ -236,7 +236,7 @@ def getResults(FairnessType,filePathBase,y_len=19.2,x_len=10.8):
         if FairnessType==1:
             Models.pop("Minimum_Exposure") # because it loss too many Recommendation Quality
             Models.pop("All_Random")# because it loss too many Recommendation Quality
-        result = MCPFDevieQuality_Offline(Models, [metrixType, "satisfaction_var"], [0.5, 0.5], 2, 26,
+        result = MCPFDevieQuality_Offline(Models, [metrixType, "satisfaction_var"], λList, 2, 26,
                                           "satisfaction_total", user_number_amazon)
         paint(result[0],result[1],"",x_len,y_len,"K","UIR","*",linewidth,markersize,path)
 
@@ -244,6 +244,7 @@ def getResults(FairnessType,filePathBase,y_len=19.2,x_len=10.8):
 if __name__ == '__main__':
     linewidth = 5
     markersize = 19
+    λList=[0.5,0.5]
     FairnessType=0 # Uniform Weighted =1   Quality Weighted=0
     filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\\Offline_Pig_UIR"
-    getResults(FairnessType,filePathBase,10.8,19.2)
+    getResults(FairnessType,filePathBase,λList,10.8,19.2)

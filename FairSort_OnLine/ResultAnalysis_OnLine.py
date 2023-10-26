@@ -109,7 +109,7 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markev
                   fancybox=True, shadow=True, ncol=5, prop=font2)
     # hide the axes frame and the x/y labels
     ax_leg.axis('off')
-    # plt.show()
+    plt.show()
 
 
 # Ctrip:Result_Analysis:
