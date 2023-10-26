@@ -246,5 +246,5 @@ if __name__ == '__main__':
     markersize = 19
     λList=[0.5,0.5]
     FairnessType=0 # Uniform Weighted =1   Quality Weighted=0
-    filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\\Offline_Pig_UIR"
+    filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\Offline_Pig_UIR"
     getResults(FairnessType,filePathBase,λList,10.8,19.2)
