@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="Experiment Results and Final Version">
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="delete large File (Final Version)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +44,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "Rebasing main",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/FairSort/BaseLine/Results/OnLine/ctrip/Top_K_Online.csv",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/FairSort",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +57,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.MCPFairResultAnalysis_Offline">
+  <component name="RunManager" selected="Python.ResultAnalysis_OffLine">
     <configuration name="FairSort_Online_Ctrip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,8 +170,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.MCPFairResultAnalysis_Offline" />
         <item itemvalue="Python.ResultAnalysis_OffLine" />
+        <item itemvalue="Python.MCPFairResultAnalysis_Offline" />
         <item itemvalue="Python.ResultAnalysis_OnLine" />
         <item itemvalue="Python.FairSort_Online_Ctrip" />
         <item itemvalue="Python.FairSort_Online_Google" />
@@ -216,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698297886504</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="delete large File (Final Version)">
+      <option name="closed" value="true" />
+      <created>1698310803909</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698310803909</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +269,8 @@
     <MESSAGE value="(delete large file and dataset)_Final Version" />
     <MESSAGE value="Final Version + Experiment Results" />
     <MESSAGE value="Experiment Results and Final Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Experiment Results and Final Version" />
+    <MESSAGE value="delete large File (Final Version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete large File (Final Version)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -288,7 +295,7 @@
     <SUITE FILE_PATH="coverage/FairSort$TFROM_quality_weighted_g_a.coverage" NAME="TFROM_quality_weighted_g&amp;a Coverage Results" MODIFIED="1697453377678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FairSort$Test.coverage" NAME="Test Coverage Results" MODIFIED="1697464044536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
     <SUITE FILE_PATH="coverage/FairSort$ResultAnalysis_OnLine.coverage" NAME="ResultAnalysis_OnLine Coverage Results" MODIFIED="1698306388065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
-    <SUITE FILE_PATH="coverage/FairSort$ResultAnalysis_OffLine.coverage" NAME="ResultAnalysis_OffLine Coverage Results" MODIFIED="1698306820031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+    <SUITE FILE_PATH="coverage/FairSort$ResultAnalysis_OffLine.coverage" NAME="ResultAnalysis_OffLine Coverage Results" MODIFIED="1698310002980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
     <SUITE FILE_PATH="coverage/FairSort$FairSort_Offline_Amazon.coverage" NAME="FairSort_Offline_Amazon Coverage Results" MODIFIED="1697454976624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
   </component>
 </project>
