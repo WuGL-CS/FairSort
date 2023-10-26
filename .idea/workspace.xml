@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="delete large File (Final Version)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) delete large File  wuguoli">
+      <change afterPath="$PROJECT_DIR$/.git.bfg-report/2023-10-26/17-46-00/cache-stats.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.git.bfg-report/2023-10-26/17-46-00/deleted-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.git.bfg-report/2023-10-26/17-46-00/object-id-map.old-new.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/Test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698310803909</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="(Final Version) delete large File">
+      <option name="closed" value="true" />
+      <created>1698311250063</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698311250063</updated>
+    </task>
+    <task id="LOCAL-00006" summary="(Final Version) delete large File  wuguoli">
+      <option name="closed" value="true" />
+      <created>1698311445651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698311445651</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +289,9 @@
     <MESSAGE value="Final Version + Experiment Results" />
     <MESSAGE value="Experiment Results and Final Version" />
     <MESSAGE value="delete large File (Final Version)" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete large File (Final Version)" />
+    <MESSAGE value="(Final Version) delete large File" />
+    <MESSAGE value="(Final Version) delete large File  wuguoli" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) delete large File  wuguoli" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
