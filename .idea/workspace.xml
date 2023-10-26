@@ -4,77 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="Final Version">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(delete large file and dataset)_Final Version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/CP_Fair_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/FairRecOffLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/Mixed_k_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/Random_k_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/Top_K_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/minimumExposure_OffLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/CP_Fair_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/Mixed_k_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/Random_k_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/Top_K_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/minimumExposure_OffLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/CP_Fair_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/FairRecOffLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/Mixed_k_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/Random_k_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/Top_K_Offline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/minimumExposure_OffLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/amazon/Mixed_k_OnLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/amazon/Random_k_Online.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/amazon/Top_K_Online.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/amazon/minimumExposure_OnLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/ctrip/Mixed_k_OnLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/ctrip/Random_k_Online.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/ctrip/Top_K_Online.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/ctrip/minimumExposure_OnLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/google/Mixed_k_OnLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/google/Random_k_Online.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/google/Top_K_Online.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OnLine/google/minimumExposure_OnLine.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/Temp_Value/TFROM_amazon_provider_quality.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/Temp_Value/TFROM_ctrip_provider_quality.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/Temp_Value/TFROM_google_provider_quality.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_amazon/item_provider.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_amazon/preference_score.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_amazon/random_user.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_ctrip/random_user.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_ctrip/score_international.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_ctrip/ticket_international.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_google/item_provider.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_google/preference_score.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/data_google/random_user.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortQuality_NewOff32_0.1_0.9.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortUniformOff8_0.1_0.95.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM/result_Uniform.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM/result_quality.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortUniformOn8_1_0.85.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortQuality_NewOff16_1_0.9.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortUniformOff_16_1_0.85.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_Uniform.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_quality.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortQuality_NewOn8_0.2_0.85.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortUniformOn8_0.25_0.85.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortQuality_NewOff8_0.15_0.85.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortUniformOff8_0.15_0.85.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM/result_Uniform.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM/result_quality.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +56,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.MCPFairResultAnalysis_Offline">
+  <component name="RunManager" selected="Python.ResultAnalysis_OnLine">
     <configuration name="FairSort_Online_Ctrip" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -238,9 +169,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.MCPFairResultAnalysis_Offline" />
-        <item itemvalue="Python.ResultAnalysis_OffLine" />
         <item itemvalue="Python.ResultAnalysis_OnLine" />
+        <item itemvalue="Python.ResultAnalysis_OffLine" />
+        <item itemvalue="Python.MCPFairResultAnalysis_Offline" />
         <item itemvalue="Python.FairSort_Online_Ctrip" />
         <item itemvalue="Python.FairSort_Online_Google" />
       </list>
@@ -266,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697702367981</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="(delete large file and dataset)_Final Version">
+      <option name="closed" value="true" />
+      <created>1698296726518</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698296726518</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +238,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码" />
     <MESSAGE value="Final Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Version" />
+    <MESSAGE value="(delete large file and dataset)_Final Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="(delete large file and dataset)_Final Version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -322,7 +262,7 @@
     <SUITE FILE_PATH="coverage/FairSort$TFROM_quality_weighted_dynamic_g_a.coverage" NAME="TFROM_quality_weighted_dynamic_g&amp;a Coverage Results" MODIFIED="1697618236513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Amazon.coverage" NAME="FairSort_Online_Amazon Coverage Results" MODIFIED="1697633587291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
     <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Ctrip.coverage" NAME="FairSort_Online_Ctrip Coverage Results" MODIFIED="1697697347642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
-    <SUITE FILE_PATH="coverage/FairSort$MCPFairResultAnalysis_Offline.coverage" NAME="MCPFairResultAnalysis_Offline Coverage Results" MODIFIED="1698294190738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
+    <SUITE FILE_PATH="coverage/FairSort$MCPFairResultAnalysis_Offline.coverage" NAME="MCPFairResultAnalysis_Offline Coverage Results" MODIFIED="1698297744393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
     <SUITE FILE_PATH="coverage/FairSort$FairSort_Offline_google.coverage" NAME="FairSort_Offline_google Coverage Results" MODIFIED="1697458130289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OffLine" />
     <SUITE FILE_PATH="coverage/FairSort$TestBaseLineOffLine.coverage" NAME="TestBaseLineOffLine Coverage Results" MODIFIED="1697443914282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BaseLine" />
     <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Google.coverage" NAME="FairSort_Online_Google Coverage Results" MODIFIED="1697634107424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
