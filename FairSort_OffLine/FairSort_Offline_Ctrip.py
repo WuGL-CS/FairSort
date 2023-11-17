@@ -39,14 +39,14 @@ if __name__ == '__main__':
     ratio=1
     low_bound=0.9
     gap=1/64
-    qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
+    qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
     # save result analyze
     csvFile=Utils.SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bound)
     writer=csv.writer(csvFile)
     t=time.time()
     for K in range(2,k+1):
      FairSort.FairSortForTheWhole(userList,λ,score,sorted_score,ratio,K,low_bound,gap,item_ProducerList,"airline",qualityOrUniform,0.1,dataset_name,writer)#（λ=128,ratio=1,K=23, low_bound=0.85，gap=1/256，force=0.1）+left+linearRate1
-    print(f'时间差:{time.time() - t:.3f}s')
+    print(f'Time spent:{time.time() - t:.3f}s')
     csvFile.close()
     print('Finished!')
 # 以下为阶段性测试：测试函数  FairSortForUser以及其依赖函数getReSortNDCG

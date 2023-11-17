@@ -56,6 +56,8 @@ def resultAnalysis_Online(dataSetName,BestResultFilePath,title,indexName,X_len,Y
             # if(modelName=="FairSort_Uniform"):
             #     indexName="exposure_var"
             Y_dict[modelName]=np.array(csv[indexName])#this indexName has no extendable(bug)
+            for index in range(len(Y_dict[modelName])):
+                Y_dict[modelName][index]/=(index+1)
     paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markevery,filePath)
 #X_len=5 Y_len=2.7
 def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markevery,path):
@@ -89,6 +91,8 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markev
     # mplcyberpunk.make_lines_glow()
     ax.set_xlabel(x_label,fontsize="40")  # Add an x-label to the axes.
     ax.set_ylabel(y_label,fontsize="30")  # Add a y-label to the axes.
+    plt.xticks(fontsize=32)
+    plt.yticks(fontsize=32)
     ax.set_title(title)  # Add a title to the axes.
     DraggableLegend(ax.legend(fontsize="25")) # Add a legend.
     plt.legend().set_visible(False)
@@ -226,7 +230,7 @@ if __name__ == '__main__':
     lineWidth = 5
     markerSize = 25
     markevery = 1500
-    metrix = ["Total recommendation quality", "Variance of NDCG", "Variance of exposure", "Exposure_quality_var"]
+    metrix = ["Total recommendation quality"]
     datasets = ["ctrip", "amazon", "google"]
     filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\OnLine_Pig"
     getResult(metrix, datasets, lineWidth, markerSize,markevery,filePathBase)

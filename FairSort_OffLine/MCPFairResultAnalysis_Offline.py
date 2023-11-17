@@ -1,3 +1,4 @@
+import csv
 import math
 
 import numpy as np
@@ -59,6 +60,21 @@ def MCPFDevieQuality_Offline(BestResultFilePath,Y_indexNameList,λList,X_bottom,
         Y_dict[modelName]/=np.array(csv[satisfaction_total])/totalUsers
     return X, Y_dict
 
+def MCPFDevieQuality_Offline_New(BestResultFilePath,Y_indexNameList,λList,X_bottom,X_up,satisfaction_total,totalUsers, worstModelResult):
+    Y_dict = {}
+    X = [x for x in range(X_bottom, X_up)]
+
+    for modelName, path in BestResultFilePath.items():
+        csv = pd.read_csv(path, encoding="gbk")
+        # if(modelName=="FairSort_Uniform"):
+        #     indexName="exposure_var"
+        Y_dict[modelName] = np.zeros(len(X))
+        for index in range(len(Y_indexNameList)):
+            Y_dict[modelName] += np.array(csv[Y_indexNameList[index]]) /np.array(worstModelResult[Y_indexNameList[index]])* λList[index]
+        # Y_dict[modelName] *= Y_episode
+        Y_dict[modelName]/=np.array(csv[satisfaction_total])/totalUsers
+    return X, Y_dict
+
 
 def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize,filePath):
     fig, ax = plt.subplots(figsize=(X_len, Y_len), layout='constrained')
@@ -86,10 +102,12 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
     ax.set_xlabel(x_label, fontsize="40")  # Add an x-label to the axes.
     ax.set_ylabel(y_label, fontsize="32")  # Add a y-label to the axes.
     ax.set_title(title)  # Add a title to the axes.
+    plt.xticks(fontsize=32)
+    plt.yticks(fontsize=32)
     DraggableLegend(ax.legend(fontsize="22")) # Add a legend.
     plt.legend().set_visible(False)
     ax.grid(True)
-    plt.savefig(filePath)
+    # plt.savefig(filePath)
     font2 = {'family': 'Times New Roman',
              'weight': 'normal',
              'size': 12,
@@ -104,17 +122,17 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
               fancybox=True, shadow=True, ncol=5, prop=font2)
     # hide the axes frame and the x/y labels
     ax_leg.axis('off')
-    # plt.show()
-    # plt.show()
+    plt.show()
+    plt.show()
 
 
-linewidth=5
-markersize=19
-
-
-user_number_ctrip = 3814
-user_number_google = 3335
-user_number_amazon = 1851
+# linewidth=5
+# markersize=19
+#
+#
+# user_number_ctrip = 3814
+# user_number_google = 3335
+# user_number_amazon = 1851
 
 
 
@@ -219,7 +237,7 @@ user_number_amazon = 1851
 
 #UIR OF Variance of the ratio of exposure and relevance
 
-def getResults(FairnessType,filePathBase,λList,y_len=19.2,x_len=10.8):
+def getResults(FairnessType,filePathBase,λList,user_NumDict,Datasets,y_len=10.8,x_len=19.2):
     if FairnessType == 0:
         metrix="Exposure_quality_var"
         metrixType = "exposure_quality_var"
@@ -228,7 +246,6 @@ def getResults(FairnessType,filePathBase,λList,y_len=19.2,x_len=10.8):
         metrix="Variance of exposure"
         metrixType="exposure_var"
         filePathBase += "//Uniform_Weighted_Fairness//"
-    Datasets=["amazon","ctrip","google"]
     # metrix=["Total recommendation quality","Vairance of NDCG","Variance of exposure", "Exposure_quality_var"]
     for dataset in Datasets:
         path=filePathBase+f"{dataset.title()}_Offline_UIR.pdf"
@@ -237,14 +254,42 @@ def getResults(FairnessType,filePathBase,λList,y_len=19.2,x_len=10.8):
             Models.pop("Minimum_Exposure") # because it loss too many Recommendation Quality
             Models.pop("All_Random")# because it loss too many Recommendation Quality
         result = MCPFDevieQuality_Offline(Models, [metrixType, "satisfaction_var"], λList, 2, 26,
-                                          "satisfaction_total", user_number_amazon)
+                                          "satisfaction_total", user_NumDict[dataset])
         paint(result[0],result[1],"",x_len,y_len,"K","UIR","*",linewidth,markersize,path)
 
+
+
+def getResults_New(FairnessType,filePathBase,λList,user_NumDict,Datasets,y_len=10.8,x_len=19.2):
+    if FairnessType == 0:
+        metrix="Exposure_quality_var"
+        metrixType = "exposure_quality_var"
+        filePathBase += "//Quality_Weighted_Fairness//"
+    elif FairnessType == 1:
+        metrix="Variance of exposure"
+        metrixType="exposure_var"
+        filePathBase += "//Uniform_Weighted_Fairness//"
+    # metrix=["Total recommendation quality","Vairance of NDCG","Variance of exposure", "Exposure_quality_var"]
+    for dataset in Datasets:
+        path=filePathBase+f"{dataset.title()}_Offline_UIR.pdf"
+        Models=ResultAnalysis_OffLine.getModels(metrix,dataset)
+        if FairnessType==1:
+            Models.pop("Minimum_Exposure") # because it loss too many Recommendation Quality
+            Models.pop("All_Random")# because it loss too many Recommendation Quality
+        #worstModel is dict : (dataset,metrix)--->worstModelResult
+        worstModelResult=dict()
+        worstModelResult["satisfaction_var"]=np.array(pd.read_csv(f"../BaseLine/Results/OffLine/{dataset}/minimumExposure_OffLine.csv")["satisfaction_var"])
+        worstModelResult[metrixType]=np.array(pd.read_csv(f"../BaseLine/Results/OffLine/{dataset}/Top_K_Offline.csv")[metrixType])
+        result = MCPFDevieQuality_Offline_New(Models, [metrixType, "satisfaction_var"], λList, 2, 26,
+                                          "satisfaction_total", user_NumDict[dataset],worstModelResult)
+        paint(result[0],result[1],"",x_len,y_len,"K","UIR","*",linewidth,markersize,path)
 
 if __name__ == '__main__':
     linewidth = 5
     markersize = 19
-    λList=[0.5,0.5]
+    Datasets = ["ctrip", "amazon",  "google"]
+    λList=[1,1]
+    user_NumDict=dict()
+    user_NumDict = {'ctrip': 3814, 'amazon': 1851, 'google': 3335}
     FairnessType=0 # Uniform Weighted =1   Quality Weighted=0
     filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\Offline_Pig_UIR"
-    getResults(FairnessType,filePathBase,λList,10.8,19.2)
+    getResults_New(FairnessType,filePathBase,λList,user_NumDict,Datasets,10.8,19.2)

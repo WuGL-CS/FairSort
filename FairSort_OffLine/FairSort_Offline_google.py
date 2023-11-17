@@ -34,7 +34,8 @@ if __name__ == '__main__':
     #对分数矩阵进行归一化操作
     score = np.array(w_score.values)
     for index in range(len(score)):
-        score[index]= (score[index]/(max(score[index])*1000))
+        score[index]= (score[index]/(max(score[index])*1000))#this can accelerate the search of λ，and will not infulence any other Index ,such as the relative rank between any item，
+        #and the NDCG ,which can be proof strictly!
 
     sorted_score = []
     for i in range(len(score)):
@@ -45,7 +46,7 @@ if __name__ == '__main__':
     ratio = 0.15
     low_bound = 0.9
     gap = 1/64
-    qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
+    qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
     userList = [i for i in range(m)]  # userList的构造
     # save result analyze
     #命名一个函数名，并且把文件创建好，把title
@@ -57,7 +58,7 @@ if __name__ == '__main__':
         FairSortForTheWhole(userList, λ, score, sorted_score, ratio, K, low_bound, gap, item_provider, "provider",
                         qualityOrUniform, 0.1,dataset_name,
                         writer)  # （λ=128,ratio=1,K=23, low_bound=0.85，gap=1/256，force=0.1）+left+linearRate1
-    print(f'时间差:{time.time() - t:.3f}s')
+    print(f'Time spent:{time.time() - t:.3f}s')
 
     csvFile.close()
     print('Finished!')

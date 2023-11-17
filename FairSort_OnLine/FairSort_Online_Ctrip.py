@@ -31,7 +31,8 @@ if __name__ == '__main__':
     score = np.array(w_score.values)
     # score_true=np.copy(score)
     for index in range(len(score)):
-        score[index] = (score[index] / (max(score[index]) * 10))
+        score[index] = (score[index] / (max(score[index]) * 10))#this can accelerate the search of λ，and will not infulence any other Index ,such as the relative rank between any item，
+        #and the NDCG ,which can be proof strictly!
 
     sorted_score = []
     for i in range(len(score)):
@@ -44,12 +45,12 @@ if __name__ == '__main__':
     ratio=1
     low_bound=0.9
     gap=1/256
-    qualityOrUniform = 0  # 公平诉求：0则为Quality  1 则为Uniform
+    qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
     # save result analyze
     csvFile=Utils.SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform,λ,ratio,low_bound)
     writer=csv.writer(csvFile)
     t=time.time()
     FairSort_Online.FairSortOnLine(λ,ratio,gap,low_bound,K,score,sorted_score,qualityOrUniform,user_Random,item_ProducerList,"airline",writer,dataset_name)
-    print(f'时间差:{time.time() - t:.3f}s')
+    print(f'Time spent:{time.time() - t:.3f}s')
     csvFile.close()
     print('Finished!')
