@@ -167,5 +167,5 @@ if __name__ == '__main__':
     markerSize=19
     metrix=["Total recommendation quality","Variance of NDCG","Variance of exposure", "Exposure_quality_var"]
     datasets=["ctrip","amazon","google"]
-    filePathBase="C:\\Users\\Administrator\\Desktop\\FairSortFigure\\OffLine_Pig"
+    filePathBase="..\\FairSortFigure\\OffLine_Pig"
     getResult(metrix,datasets,lineWidth,markerSize,filePathBase)

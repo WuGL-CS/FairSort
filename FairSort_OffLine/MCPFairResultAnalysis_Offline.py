@@ -106,6 +106,7 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
     plt.yticks(fontsize=32)
     DraggableLegend(ax.legend(fontsize="22")) # Add a legend.
     plt.legend().set_visible(False)
+    plt.savefig(filePath)
     ax.grid(True)
     # plt.savefig(filePath)
     font2 = {'family': 'Times New Roman',
@@ -291,5 +292,5 @@ if __name__ == '__main__':
     user_NumDict=dict()
     user_NumDict = {'ctrip': 3814, 'amazon': 1851, 'google': 3335}
     FairnessType=0 # Uniform Weighted =1   Quality Weighted=0
-    filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\Offline_Pig_UIR"
+    filePathBase = "..\\FairSortFigure\\Offline_Pig_UIR"
     getResults_New(FairnessType,filePathBase,λList,user_NumDict,Datasets,10.8,19.2)

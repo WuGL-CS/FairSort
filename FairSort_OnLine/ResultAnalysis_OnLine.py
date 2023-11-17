@@ -1,6 +1,5 @@
 import csv
 import os
-import mplcyberpunk
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -51,13 +50,14 @@ def resultAnalysis_Online(dataSetName,BestResultFilePath,title,indexName,X_len,Y
         X=[x for x in range(18510)]
     elif(dataSetName=="google"):
         X=[x for x in range(33350)]
-    for modelName , path in BestResultFilePath.items():
+    for modelName, path in BestResultFilePath.items():
             csv=pd.read_csv(path,encoding="gbk")
             # if(modelName=="FairSort_Uniform"):
             #     indexName="exposure_var"
             Y_dict[modelName]=np.array(csv[indexName])#this indexName has no extendable(bug)
-            for index in range(len(Y_dict[modelName])):
-                Y_dict[modelName][index]/=(index+1)
+            if(indexName=="satisfaction_total"):
+                 for index in range(len(Y_dict[modelName])):
+                    Y_dict[modelName][index]/=(index+1)#compute the average recommendation Quality
     paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markevery,filePath)
 #X_len=5 Y_len=2.7
 def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markevery,path):
@@ -195,7 +195,7 @@ def getAllModels(dataset):
     return BestResultFilePath
 def getModels(metric,dataset):
     BestResultFilePath = getAllModels(dataset)#Get the 10 models, according to the data set
-    if metric =="Total recommendation quality":
+    if metric =="Average recommendation quality":
         return BestResultFilePath
     elif metric=="Variance of NDCG":
         #they loss quite much recommendation Quality,so we do not compare them
@@ -218,7 +218,7 @@ def getResult(Metric,Dataset,lineWidth,markerSize,markevery,filePathBase):
             datasetTitle=dataset.title()
             Models=getModels(metric,dataset)
             path = filePathBase + f"/{datasetTitle}_Online_" + metric+".pdf"
-            if metric =="Total recommendation quality":
+            if metric =="Average recommendation quality":
                 resultAnalysis_Online(dataset,Models,"","satisfaction_total",19.2,10.8,"customer_request",metric,lineWidth,markerSize,markevery,path)
             elif metric=="Variance of NDCG":
                 resultAnalysis_Online(dataset,Models,"","satisfaction_var",19.2,10.8,"customer_request",metric,lineWidth,markerSize,markevery,path)
@@ -230,7 +230,7 @@ if __name__ == '__main__':
     lineWidth = 5
     markerSize = 25
     markevery = 1500
-    metrix = ["Total recommendation quality"]
+    metrix = ["Average recommendation quality","Variance of NDCG","Variance of exposure","Exposure_quality_var"]
     datasets = ["ctrip", "amazon", "google"]
-    filePathBase = "C:\\Users\\Administrator\\Desktop\\FairSortFigure\\OnLine_Pig"
+    filePathBase = "..\\FairSortFigure\\OnLine_Pig"
     getResult(metrix, datasets, lineWidth, markerSize,markevery,filePathBase)
