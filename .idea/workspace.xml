@@ -4,35 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) +Experiments Result_WuGl-CS">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Exposure_quality_var.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of NDCG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of exposure.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Exposure_quality_var.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of NDCG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of exposure.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Exposure_quality_var.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Total recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of NDCG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of exposure.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Quality_Weighted_Fairness/Amazon_Offline_UIR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Quality_Weighted_Fairness/Ctrip_Offline_UIR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Quality_Weighted_Fairness/Google_Offline_UIR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Uniform_Weighted_Fairness/Amazon_Offline_UIR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Uniform_Weighted_Fairness/Ctrip_Offline_UIR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Uniform_Weighted_Fairness/Google_Offline_UIR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Total recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Total recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Total recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FairSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FairSort.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700222168487</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="(Final Version) + Fixed the online version of the drawing, and all drawing taking a relative path to store + upload some drawings (experimental results)">
+      <created>1700230913873</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700230913873</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +288,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -321,7 +313,8 @@
     <MESSAGE value="(Final Version) delete large File  wuguoli" />
     <MESSAGE value="(Final Version) +Experiments Result_WuGl-CS" />
     <MESSAGE value="2023年11月17日" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023年11月17日" />
+    <MESSAGE value="(Final Version) + Fixed the online version of the drawing, and all drawing taking a relative path to store + upload some drawings (experimental results)" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) + Fixed the online version of the drawing, and all drawing taking a relative path to store + upload some drawings (experimental results)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
