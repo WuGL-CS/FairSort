@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Average recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Average recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Average recommendation quality.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -260,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700230913873</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="(Final Version) Time:2023,11,24">
+      <created>1700487142542</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700487142542</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +307,8 @@
     <MESSAGE value="(Final Version) +Experiments Result_WuGl-CS" />
     <MESSAGE value="2023年11月17日" />
     <MESSAGE value="(Final Version) + Fixed the online version of the drawing, and all drawing taking a relative path to store + upload some drawings (experimental results)" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) + Fixed the online version of the drawing, and all drawing taking a relative path to store + upload some drawings (experimental results)" />
+    <MESSAGE value="(Final Version) Time:2023,11,24" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2023,11,24" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

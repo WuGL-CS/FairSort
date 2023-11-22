@@ -151,7 +151,7 @@ def getSatisfactionDistribution(user_satisfaction):
     print("总共:", count9+count8+count7+count6 + count5 + count4 + count3 + count2 + count1)
 
 def getSatisfactionDistribution2(user_satisfaction,user_satisDistributList):
-        if (user_satisfaction < 0.5):
+        if (user_satisfaction <= 0.5):
             user_satisDistributList[0] += 1
         elif (user_satisfaction <= 0.6):
             user_satisDistributList[1] += 1
