@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/FairSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FairSort.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TFROM_uniform_dyanmic_g&amp;a.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_uniform_dyanmic_g&amp;a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TFROM_uniform_dynamic.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_uniform_dynamic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Uniform.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Uniform.csv" afterDir="false" />
-    </list>
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) Time:2023 year 11,27" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,12 +42,13 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/anacondas/Scripts/conda.exe",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/FairSort/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "two.files.diff.last.used.file": "C:/Users/Administrator/Desktop/FairSort/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -204,7 +192,8 @@
       <workItem from="1699892958956" duration="606000" />
       <workItem from="1700135705116" duration="1005000" />
       <workItem from="1700891073771" duration="3403000" />
-      <workItem from="1701011346524" duration="10574000" />
+      <workItem from="1701011346524" duration="12168000" />
+      <workItem from="1701091138027" duration="982000" />
     </task>
     <task id="LOCAL-00001" summary="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码">
       <option name="closed" value="true" />
@@ -283,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700487142542</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="(Final Version) Time:2023,11,27">
+      <option name="closed" value="true" />
+      <created>1701089443554</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701089443554</updated>
+    </task>
+    <task id="LOCAL-00012" summary="(Final Version) Time:2023 year 11,27">
+      <option name="closed" value="true" />
+      <created>1701091496887</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701091496887</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +316,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -337,7 +342,9 @@
     <MESSAGE value="2023年11月17日" />
     <MESSAGE value="(Final Version) + Fixed the online version of the drawing, and all drawing taking a relative path to store + upload some drawings (experimental results)" />
     <MESSAGE value="(Final Version) Time:2023,11,24" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2023,11,24" />
+    <MESSAGE value="(Final Version) Time:2023,11,27" />
+    <MESSAGE value="(Final Version) Time:2023 year 11,27" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2023 year 11,27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
