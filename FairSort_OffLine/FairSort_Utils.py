@@ -167,7 +167,7 @@ def getSatisfactionDistribution2(user_satisfaction,user_satisDistributList):
             user_satisDistributList[6] += 1
         elif (user_satisfaction <= 0.95):
             user_satisDistributList[7] += 1
-        elif (user_satisfaction <= 1):
+        elif (user_satisfaction <= 1.0000005):
             user_satisDistributList[8] += 1
 
 def getStandardDeviation(List):

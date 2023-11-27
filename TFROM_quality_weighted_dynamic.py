@@ -37,7 +37,7 @@ provider = []
 provider_size = []
 grouped_ticket = ticket_list.groupby((["airline"]))
 for group_name,group_list in grouped_ticket:
-    provider.append(group_name[0])
+    provider.append(group_name[0])#BUG:sometimes you should use the group_name[0] or group_name
     provider_size.append(len(group_list))
 
 

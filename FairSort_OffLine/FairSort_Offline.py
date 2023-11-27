@@ -194,7 +194,7 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
     #计算index_ProducerNameList[] & providerSize[]
     grouped_ticket = item_ProducerList.groupby(([producerClassName]))
     for group_name, group_list in grouped_ticket:
-        index_ProducerNameList.append(group_name[0])
+        index_ProducerNameList.append(group_name[0])#BUG:sometimes you should use the group_name[0] or group_name
         providerSize.append(len(group_list))
 
     provider_size_total = sum(providerSize)

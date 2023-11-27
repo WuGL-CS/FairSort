@@ -125,7 +125,7 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
     # 计算index_ProducerNameList[] & providerSize[]
     grouped_ticket = item_ProducerList.groupby(([producerClassName]))
     for group_name, group_list in grouped_ticket:
-        index_ProducerNameList.append(group_name[0])
+        index_ProducerNameList.append(group_name[0])#BUG:sometimes you should use the group_name[0] or group_name
         provider_SizeList.append(len(group_list))
     #初始化satisDistributeList
     satisDistributeList=[0 for x in range(9)]
