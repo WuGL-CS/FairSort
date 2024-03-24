@@ -115,7 +115,7 @@ def getFairliftFactorAndVar_Rate2(producerExposure_TopK, fair_exposure,fairRegul
                 rateErr.append(rateErr_temp)
     err = np.array(err)
     err_var = np.var(err)
-    print("当前的曝光资源差额值" + str(err) + "当前曝光资源相对于公平分配的方差：" + str(err_var))
+    # print("当前的曝光资源差额值" + str(err) + "当前曝光资源相对于公平分配的方差：" + str(err_var))
     FairliftFactor = rateErr
     return (FairliftFactor, err_var)
 
@@ -157,14 +157,14 @@ def FairSortForUser(user_temp, λ, F,score, sorted_score, NDCG_low_bound, K,gap,
             right = λ_temp
         else:
             left = λ_temp
-    print("当前：" + str(user_temp) + "二分查找了" + str(count) + "次")
+    # print("当前：" + str(user_temp) + "二分查找了" + str(count) + "次")
     if( not equalBoolean ):
         # target_λ=(left+right)/2
         target_λ=left
         # target_λ=right
     #再将搜到的target_λ进行重新排序，并返回NDCG值
-    print("当前用户："+str(user_temp)+"确定的λ大小为："+str(target_λ))
     ReSort_NDCG = getReSortNDCG(score, target_λ, F,IDCG,user_temp,ReRankList,item_num,K,item_ProducerNameList,index_ProducerNameList)
+    print("当前用户："+str(user_temp)+"确定的λ大小为："+str(target_λ)+" Recommendation Quality:" +str(ReSort_NDCG))
     return (ReSort_NDCG,ReRankList[:K])
 
 
@@ -223,7 +223,7 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
             producerExposure_TopK[producer_Index]+=1/math.log((2+rank_temp),2)
     #将这个值赋值给提供商曝光资源分配情况（这个是动态变化的）
     producerExposure = [producerExposure_TopK[i] for i in range(len(index_ProducerNameList))]
-    print("当前系统提供商top-k下的曝光值",producerExposure)
+    # print("当前系统提供商top-k下的曝光值",producerExposure)
 #接下来计算各个提供商曝光资源公平分配值应该是多少！！！！！
     # 计算当前K下，总曝光资源
     total_exposure = 0
@@ -241,7 +241,7 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
         providerSize_sum=sum(providerSize)
         for i in range(len(index_ProducerNameList)):
             fair_exposure.append(total_exposure /providerSize_sum  * providerSize[i])
-    print("当前系统提供商如果公平，应得到的曝光值：",fair_exposure)
+    # print("当前系统提供商如果公平，应得到的曝光值：",fair_exposure)
     userSatisfaction=[0 for i in range(len(userList))]#同于记录用户的满意度值
     #似乎忘记给producerFairExposure赋值
 #上面的所有数据结构准备完毕，下面FairSort算法开始服务:(待思考问题：)
@@ -262,26 +262,29 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
     #有了公平性启发后的提升因子,进行二分搜索
         #有了提升因子，其实应该看其公平性怎样，再做计划的，但是我们先进行
         RecResult=FairSortForUser(user_temp,λ,FairLiftFactor,score,sorted_score,NDCG_low_bound,K,gap,ratio,item_ProducerNameList,index_ProducerNameList)
-        print("Current exposure error variance: "+str(result[1])+"  Provider_Fair_Index "+str(Utils.getVar(Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality)))+"  Recommended_List_Quality:"+str(RecResult[0]))
+        # print("Current exposure error variance: "+str(result[1])+"  Provider_Fair_Index "+str(Utils.getVar(Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality)))+"  Recommended_List_Quality:"+str(RecResult[0]))
         userSatisfaction[user_temp]=RecResult[0]
-        print("Current User: " + str(user_temp) +"  The Lift Factor List: " +str(FairLiftFactor))
+        # print("Current User: " + str(user_temp) +"  The Lift Factor List: " +str(FairLiftFactor))
         user_satisfactionTotal+=RecResult[0]
         ReRankList_userTemp = RecResult[1]
         #对曝光资源进行更新操作！将原有Top-k列表的曝光资源分配情况进行重新调整，牺牲一定的推荐质量，换取提供商公平
         refreshExposureAlloaction(producerExposure, ReRankList_userTemp, sorted_score,K,
                                   user_temp,item_ProducerNameList,index_ProducerNameList)
-        print("Finished Service user："+str(user_temp)+" later,Error between producerExposure and fair_Exposure :",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
+        # print("Finished Service user："+str(user_temp)+" later,Error between producerExposure and fair_Exposure :",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
+        print("Finished Service user："+str(user_temp)+" later : provider_Fair_Index :"+str(Utils.getVar(
+            Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality))))
+
         if(count%10==0):
             print("Total service "+str(count)+" Users"+"  provider_Fair_Index :"+str(Utils.getVar(
             Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality))))
-            print("The final exposure resource distribution on the  provider_side is", producerExposure)
-            print("Fair distribution should be(Exposure For Every Provider)：", fair_exposure)
-            print("Error：",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
+            # print("The final exposure resource distribution on the  provider_side is", producerExposure)
+            # print("Fair distribution should be(Exposure For Every Provider)：", fair_exposure)
+            # print("Error：",Utils.getFairAndCurrentErr(producerExposure,fair_exposure))
 #我们要对本轮算法进行结果分析:
     print("The algorithm is over：")
-    print("Tok-K exposure resource distribution is：", producerExposure_TopK)
-    print("The final exposure resource distribution on the  provider_side is",producerExposure)
-    print("Fair distribution should be(Exposure For Every Provider)：",fair_exposure)
+    # print("Tok-K exposure resource distribution is：", producerExposure_TopK)
+    # print("The final exposure resource distribution on the  provider_side is",producerExposure)
+    # print("Fair distribution should be(Exposure For Every Provider)：",fair_exposure)
     print("The provider's initial top-k Exposure_Quality conversion Rate is:：",Utils.getProducerExposurCoversionRate(producerExposure_TopK,fairRegulation,providerSize,provider_quality))
     print("The final conversion Rate distribution on the provider side is：",Utils.getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality))
     print("Error between producerExposure_TopK and fair_exposure",Utils.getFairAndCurrentErr(producerExposure_TopK,fair_exposure))

@@ -3,7 +3,7 @@ import time
 from FairSort_Offline import  FairSortForTheWhole as FairSortForTheWhole
 import pandas as pd
 import numpy as np
-from FairSort_OffLine import  FairSort_Utils as Utils
+import  FairSort_Utils as Utils
 
 if __name__ == '__main__':
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
         # hyperParameter
     λ = 32
     ratio = 0.1
-    low_bound = 0.95
+    low_bound = 0.9
     gap = 1/32
     qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
     userList = [i for i in range(m)]  # userList的构造
