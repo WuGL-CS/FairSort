@@ -5,8 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/FairSortDiagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortQuality_NewOff32_0.1_0.9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortUniformOff8_0.1_0.95.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM/result_Uniform.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM/result_quality.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_amazon/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortUniformOn8_1_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortQuality_NewOff16_1_0.9.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortUniformOff_16_1_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_Uniform.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_quality.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortQuality_NewOn8_0.2_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortOnLine/FairSortUniformOn8_0.25_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortQuality_NewOff8_0.15_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/FairSortUniformOff8_0.15_0.85.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM/result_Uniform.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM/result_quality.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Uniform.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713277431803</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Time:2024 year 4,16(Final Version)">
+      <created>1713277957150</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713277957150</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +375,8 @@
     <MESSAGE value="(Final Version) Time:2023,11,27" />
     <MESSAGE value="(Final Version) Time:2023 year 11,27" />
     <MESSAGE value="(Final Version) Time:2024 year 4,16" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2024 year 4,16" />
+    <MESSAGE value="Time:2024 year 4,16(Final Version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Time:2024 year 4,16(Final Version)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
