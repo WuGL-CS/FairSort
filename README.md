@@ -1,4 +1,4 @@
-#FairSort Diagram
+# FairSort Diagram
 
 A  implementation of "FairSort: Learning to Fair Rank for Personalized
 Recommendations in Two-Sided Platforms"
