@@ -3,7 +3,7 @@
 A  implementation of "FairSort: Learning to Fair Rank for Personalized
 Recommendations in Two-Sided Platforms"
 
-<div align=center><img src="FairSortDiagram.png" width="900"/></div>
+<div align=center><img src="FairSortDiagram.png" width="1300"/></div>
 
 
 
