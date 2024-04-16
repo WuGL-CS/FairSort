@@ -4,7 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) Time:2023 year 11,27" />
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) Time:2024 year 4,13">
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_NDCG_svg_plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var_Plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure_plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_NDCG_svg_plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var_Plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure_plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_NDCG_svg_plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var_Plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure_Plus.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure_plus.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FairSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FairSort.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of exposure.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of exposure.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Total recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of exposure.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Average recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Average recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Average recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/Test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +84,6 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
   <component name="ProjectId" id="2Wo7XJA41WsSV4srewx456mxsPH" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -38,22 +92,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/FairSort/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "two.files.diff.last.used.file": "C:/Users/Administrator/Desktop/FairSort/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="RunManager" selected="Python.TFROM_quality_weighted_dynamic_g&amp;a">
-    <configuration name="FairSort_Online_Google" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.ResultAnalysis_OffLine">
+    <configuration name="ResultAnalysis_OffLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ResultAnalysis_OnLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,7 +127,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Google.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +180,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="TFROM_uniform_dyanmic_g&amp;a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,34 +188,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TFROM_uniform_dyanmic_g&amp;a.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TFROM_uniform_dynamic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FairSort" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TFROM_uniform_dynamic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/Test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ResultAnalysis_OffLine" />
+        <item itemvalue="Python.ResultAnalysis_OnLine" />
+        <item itemvalue="Python.Test" />
         <item itemvalue="Python.TFROM_quality_weighted_dynamic_g&amp;a" />
         <item itemvalue="Python.TFROM_quality_weighted_dynamic" />
-        <item itemvalue="Python.TFROM_uniform_dynamic" />
-        <item itemvalue="Python.TFROM_uniform_dyanmic_g&amp;a" />
-        <item itemvalue="Python.FairSort_Online_Google" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +233,11 @@
       <workItem from="1700891073771" duration="3403000" />
       <workItem from="1701011346524" duration="12168000" />
       <workItem from="1701091138027" duration="982000" />
+      <workItem from="1706849788880" duration="140000" />
+      <workItem from="1709722060326" duration="31000" />
+      <workItem from="1711252266077" duration="13000" />
+      <workItem from="1712975338576" duration="20000" />
+      <workItem from="1712975376689" duration="16000" />
     </task>
     <task id="LOCAL-00001" summary="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码">
       <option name="closed" value="true" />
@@ -327,6 +371,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -371,13 +416,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FairSort$TFROM_quality_weighted_dynamic.coverage" NAME="TFROM_quality_weighted_dynamic Coverage Results" MODIFIED="1701054895550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FairSort$TFROM_quality_weighted_dynamic_g_a.coverage" NAME="TFROM_quality_weighted_dynamic_g&amp;a Coverage Results" MODIFIED="1701054900056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FairSort$TFROM_uniform_dynamic.coverage" NAME="TFROM_uniform_dynamic Coverage Results" MODIFIED="1701054891385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Ctrip.coverage" NAME="FairSort_Online_Ctrip Coverage Results" MODIFIED="1701014514227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
-    <SUITE FILE_PATH="coverage/FairSort$TFROM_uniform_dyanmic_g_a.coverage" NAME="TFROM_uniform_dyanmic_g&amp;a Coverage Results" MODIFIED="1701054886997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FairSort$FairSort_Online_Google.coverage" NAME="FairSort_Online_Google Coverage Results" MODIFIED="1701014562195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FairSort_OnLine" />
   </component>
 </project>
