@@ -4,63 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) Time:2024 year 4,13">
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_NDCG_svg_plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var_Plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure_plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_NDCG_svg_plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var_Plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure_plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_NDCG_svg_plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var_Plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure_Plus.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure_plus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FairSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FairSort.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Exposure_quality_var.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of NDCG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of exposure.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Exposure_quality_var.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of NDCG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of exposure.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Exposure_quality_var.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Total recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Total recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of NDCG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of exposure.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Average recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Average recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Exposure_quality_var.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of NDCG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Amazon_Online_Variance of exposure.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Average recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Average recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Exposure_quality_var.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of NDCG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Ctrip_Online_Variance of exposure.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Average recommendation quality.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Average recommendation quality.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Exposure_quality_var.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of NDCG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig/Google_Online_Variance of exposure.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/Test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701091496887</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="(Final Version) Time:2024 year 4,16">
+      <created>1713277431803</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713277431803</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +342,8 @@
     <MESSAGE value="(Final Version) Time:2023,11,24" />
     <MESSAGE value="(Final Version) Time:2023,11,27" />
     <MESSAGE value="(Final Version) Time:2023 year 11,27" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2023 year 11,27" />
+    <MESSAGE value="(Final Version) Time:2024 year 4,16" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2024 year 4,16" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
