@@ -10,7 +10,7 @@ Recommendations in Two-Sided Platforms"
 # Hyperparameter setting
 
 
-<img src="img_2.png" alt="图片描述" width="60%" height="auto">
+<img src="img_2.png" alt="图片描述" width="85%" height="auto">
 
 [//]: # (![img_2.png]&#40;img_2.png&#41;)
 
