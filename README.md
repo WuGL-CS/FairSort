@@ -43,7 +43,7 @@ pre-filtered items and users with less than 10 reviews or being
 reviewed and only consider reviews of items in the “Clothing
 Shoes and Jewelry” category, which has the largest number
 of reviews. And using the well-known matrix decomposition
-model [42] to estimate users’ preference scores for items,
+model to estimate users’ preference scores for items,
 the dataset does not provide information between items and
 providers. We then model the providers by clustering methods,
 with 1-100 items clustered into one category. The processed
