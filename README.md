@@ -19,7 +19,7 @@ Recommendations in Two-Sided Platforms"
 ## Run the code
 After installation, you can clone this repository
 ```
-git clone https://github.com/13543024276/FairSort
+git clone git@github.com:13543024276/FairSort.git
 cd FairSort/FairSort_OffLine or cd FairSort/FairSort_OffLine
 [such as Amazon]
 python FairSort_Online_Amazon.py 
