@@ -185,7 +185,7 @@ def FairSortForUser(user_temp, λ, F,score, sorted_score, NDCG_low_bound, K,gap,
 #              result_writer:算法结果分析的输出流
 # 返回值:应当是：各个用户的Top K排序列表，以及整个过程的信息统计量（公平指标，推荐总满意度，等等)
 def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_bound,gap,
-             item_ProducerList,producerClassName,fairRegulation,force,dataSetName,result_writer):
+             item_ProducerList,producerClassName,fairRegulation,force,dataSetName):
     m=len(userList)#用户的个数信息
 #BY  item_ProducerList  ===>d  [item_ProducerNameList,index_ProducerNameList,
 #       providerSize,provider_quality]
@@ -326,4 +326,4 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
         row.append(Utils.getFairAndCurrentErr(producerExposure, fair_exposure))  # "FairSort曝光err"
         row.append(providerSize)  # "提供商物品数分布"
         row.append(provider_quality)  # "提供商价值量分布"
-    result_writer.writerow(row)
+    return row

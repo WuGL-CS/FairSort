@@ -45,7 +45,8 @@ if __name__ == '__main__':
     writer=csv.writer(csvFile)
     t=time.time()
     for K in range(2,k+1):
-     FairSort.FairSortForTheWhole(userList,λ,score,sorted_score,ratio,K,low_bound,gap,item_ProducerList,"airline",qualityOrUniform,0.1,dataset_name,writer)#（λ=128,ratio=1,K=23, low_bound=0.85，gap=1/256，force=0.1）+left+linearRate1
+      row=FairSort.FairSortForTheWhole(userList,λ,score,sorted_score,ratio,K,low_bound,gap,item_ProducerList,"airline",qualityOrUniform,0.1,dataset_name)#（λ=128,ratio=1,K=23, low_bound=0.85，gap=1/256，force=0.1）+left+linearRate1
+      writer.writerow(row)
     print(f'Time spent:{time.time() - t:.3f}s')
     csvFile.close()
     print('Finished!')

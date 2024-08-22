@@ -56,12 +56,33 @@
 #         #score：—————>itemFlag：
 #
 #
-import  numpy as np
-score = np.array([[1.0,1.0],[1.0,1.0]])
-score_true=np.copy(score)
-for index in range(len(score)):
-    score[index] = (score[index] / (max(score[index]) * 1000))
-print(score)
-print(score_true)
+# import  numpy as np
+# score = np.array([[1.0,1.0],[1.0,1.0]])
+# score_true=np.copy(score)
+# for index in range(len(score)):
+#     score[index] = (score[index] / (max(score[index]) * 1000))
+# print(score)
+# print(score_true)
 
 #asda
+
+import random
+
+# 原始列表
+original_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 设置随机数种子
+seeds = [42, 100, 1234, 2024, 5555]
+
+# 用不同的随机数种子打乱列表
+shuffled_lists = []
+
+for seed in seeds:
+    random.seed(seed)  # 设置随机种子
+    shuffled_list = original_list[:]  # 复制列表
+    random.shuffle(shuffled_list)  # 打乱列表
+    shuffled_lists.append(shuffled_list)  # 将打乱后的列表添加到结果列表中
+
+# 打印结果
+for i, shuffled_list in enumerate(shuffled_lists):
+    print(f"Seed {seeds[i]}: {shuffled_list}")
