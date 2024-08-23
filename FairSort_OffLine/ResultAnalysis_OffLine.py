@@ -49,9 +49,9 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
             ax.plot(X, Y, label=modelName ,linestyle=':',marker="o", markersize=markersize,color="darkviolet",lw=linewidth)# Plot more data on the axes...
         elif(modelName=="Top-K"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker="D", markersize=markersize, color="black",lw=linewidth)  # Plot more data on the axes...
-        elif(modelName=="FairSort_offline_Quality_Weighted"):
+        elif(modelName=="FairSort_Quality_Weight"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker="^", markersize=markersize, color="blue",lw=linewidth)# Plot more data on the axes...
-        elif (modelName == "FairSort_offline_Uniform"):
+        elif (modelName == "FairSort_Uniform_Weight"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker="v", markersize=markersize, color="green",lw=linewidth)  # Plot more data on the axes...
         elif (modelName == "All_Random"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker="*", markersize=markersize,color="chocolate",lw=linewidth)  # Plot more data on the axes...
@@ -59,9 +59,9 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
             ax.plot(X, Y, label=modelName, linestyle=':', marker="p",  markersize=markersize,color="maroon",lw=linewidth)  # Plot more data on the axes...
         elif (modelName == "Fair_Rec"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker="s", markersize=markersize,color="olive",lw=linewidth)  # Plot more data on the axes...
-        elif (modelName == "TFROM_offline_Uniform"):
+        elif (modelName == "TFROM_Uniform_Weight"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker="<", markersize=markersize,color="deeppink",lw=linewidth)  # Plot more data on the axes...
-        elif (modelName == "TFROM_offline_Quality_Weighted"):
+        elif (modelName == "TFROM_Quality_Weight"):
             ax.plot(X, Y, label=modelName, linestyle=':', marker=">", markersize=markersize, color="orange",lw=linewidth)  # Plot more data on the axes...
         elif (modelName=="CP_Fair"):
             ax.plot(X,Y,label=modelName, linestyle=':', marker="X",markersize=markersize, color="red",lw=linewidth)   # Plot more data on the axes...
@@ -103,23 +103,23 @@ def getAllModels(dataset):
     BestResultFilePath["All_Random"] = basePath_BaseLine + "Random_k_Offline.csv"
     BestResultFilePath["Mixed-k"] = basePath_BaseLine + "Mixed_k_OffLine.csv"
     # SOTA Model:
-    BestResultFilePath["TFROM_offline_Quality_Weighted"] = sotaPath + "TFROM/result_quality.csv"
-    BestResultFilePath["TFROM_offline_Uniform"] = sotaPath + "TFROM/result_Uniform.csv"
+    BestResultFilePath["TFROM_Quality_Weight"] = sotaPath + "TFROM/result_quality.csv"
+    BestResultFilePath["TFROM_Uniform_Weight"] = sotaPath + "TFROM/result_Uniform.csv"
     if dataset == "ctrip":
         BestResultFilePath[
-            "FairSort_offline_Uniform"] = sotaPath + "FairSortUniformOff_16_1_0.85.csv"
+            "FairSort_Uniform_Weight"] = sotaPath + "FairSortUniformOff_16_1_0.85.csv"
         BestResultFilePath[
-            "FairSort_offline_Quality_Weighted"] = sotaPath + "FairSortQuality_NewOff16_1_0.9.csv"
+            "FairSort_Quality_Weight"] = sotaPath + "FairSortQuality_NewOff16_1_0.9.csv"
     elif dataset == "amazon":
         BestResultFilePath[
-            "FairSort_offline_Quality_Weighted"] = sotaPath + "/FairSortQuality_NewOff32_0.1_0.9.csv"
+            "FairSort_Quality_Weight"] = sotaPath + "/FairSortQuality_NewOff32_0.1_0.9.csv"
         BestResultFilePath[
-            "FairSort_offline_Uniform"] = sotaPath + "/FairSortUniformOff8_0.1_0.95.csv"
+            "FairSort_Uniform_Weight"] = sotaPath + "/FairSortUniformOff8_0.1_0.95.csv"
     elif dataset == "google":
         BestResultFilePath[
-            "FairSort_offline_Uniform"] = sotaPath + "/FairSortUniformOff8_0.15_0.85.csv"
+            "FairSort_Uniform_Weight"] = sotaPath + "/FairSortUniformOff8_0.15_0.85.csv"
         BestResultFilePath[
-            "FairSort_offline_Quality_Weighted"] = sotaPath + "/FairSortQuality_NewOff8_0.15_0.85.csv"
+            "FairSort_Quality_Weight"] = sotaPath + "/FairSortQuality_NewOff8_0.15_0.85.csv"
     return BestResultFilePath
 def getModels(metric,dataset):
     BestResultFilePath = getAllModels(dataset)#Get the 10 models, according to the data set
@@ -130,13 +130,13 @@ def getModels(metric,dataset):
         BestResultFilePath.pop("Mixed-k")
         return BestResultFilePath
     elif metric=="Variance of exposure":
-        BestResultFilePath.pop("FairSort_offline_Quality_Weighted")
-        BestResultFilePath.pop("TFROM_offline_Quality_Weighted")
+        BestResultFilePath.pop("FairSort_Quality_Weight")
+        BestResultFilePath.pop("TFROM_Quality_Weight")
         BestResultFilePath.pop("Mixed-k")
         return BestResultFilePath
     elif metric=="Exposure_quality_var":
-        BestResultFilePath.pop("TFROM_offline_Uniform")
-        BestResultFilePath.pop("FairSort_offline_Uniform")
+        BestResultFilePath.pop("TFROM_Uniform_Weight")
+        BestResultFilePath.pop("FairSort_Uniform_Weight")
         BestResultFilePath.pop("Mixed-k")
         BestResultFilePath.pop("All_Random")
         BestResultFilePath.pop("Minimum_Exposure")

@@ -1,6 +1,3 @@
-import csv
-import os
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -75,16 +72,16 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,linewidth,markersize,markev
         elif (modelName == "Mixed-k"):
             ax.plot(X, Y, label=modelName, linestyle='-', marker="p",markevery=markevery, markersize=markersize, color="maroon",
                     lw=linewidth)  # Plot more data on the axes...
-        elif (modelName == "TFROM_online_Uniform"):
+        elif (modelName == "TFROM_Uniform_Weight"):
             ax.plot(X, Y, label=modelName, linestyle='-', marker="<", markevery=markevery,markersize=markersize, color="deeppink",
                     lw=linewidth)  # Plot more data on the axes...
-        elif (modelName == "TFROM_online_Quality_Weighted"):
+        elif (modelName == "TFROM_Quality_Weight"):
             ax.plot(X, Y, label=modelName, linestyle='-', marker=">", markevery=markevery,markersize=markersize, color="orange",
                     lw=linewidth)  # Plot more data on the axes...
-        elif (modelName == "FairSort_online_Quality_Weighted"):
+        elif (modelName == "FairSort_Quality_Weight"):
             ax.plot(X, Y, label=modelName, linestyle='-', marker="^", markevery=markevery,markersize=markersize, color="blue",
                     lw=linewidth)  # Plot more data on the axes...
-        elif (modelName == "FairSort_online_Uniform"):
+        elif (modelName == "FairSort_Uniform_Weight"):
             ax.plot(X, Y, label=modelName, linestyle='-', marker="v",markevery=markevery, markersize=markersize, color="green",
                     lw=linewidth)  # Plot more data on the axes...
 
@@ -175,23 +172,23 @@ def getAllModels(dataset):
     BestResultFilePath["All_Random"] = basePath_BaseLine + "Random_k_Online.csv"
     BestResultFilePath["Mixed-k"] = basePath_BaseLine + "Mixed_k_OnLine.csv"
     # SOTA Model:
-    BestResultFilePath["TFROM_online_Quality_Weighted"] = sotaPath + "TFROM_Dynamic/dynamic_result_Quality.csv"
-    BestResultFilePath["TFROM_online_Uniform"] = sotaPath + "TFROM_Dynamic/dynamic_result_Uniform.csv"
+    BestResultFilePath["TFROM_Quality_Weight"] = sotaPath + "TFROM_Dynamic/dynamic_result_Quality.csv"
+    BestResultFilePath["TFROM_Uniform_Weight"] = sotaPath + "TFROM_Dynamic/dynamic_result_Uniform.csv"
     if dataset == "ctrip":
         BestResultFilePath[
-            "FairSort_online_Uniform"] = sotaPath + "FairSortOnLine/FairSortUniformOn8_1_0.85.csv"
+            "FairSort_Uniform_Weight"] = sotaPath + "FairSortOnLine/FairSortUniformOn8_1_0.85.csv"
         BestResultFilePath[
-            "FairSort_online_Quality_Weighted"] = sotaPath + "FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv"
+            "FairSort_Quality_Weight"] = sotaPath + "FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv"
     elif dataset == "amazon":
         BestResultFilePath[
-            "FairSort_online_Quality_Weighted"] = sotaPath + "FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv"
+            "FairSort_Quality_Weight"] = sotaPath + "FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv"
         BestResultFilePath[
-            "FairSort_online_Uniform"] = sotaPath + "FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv"
+            "FairSort_Uniform_Weight"] = sotaPath + "FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv"
     elif dataset == "google":
         BestResultFilePath[
-            "FairSort_online_Uniform"] = sotaPath + "FairSortOnLine/FairSortUniformOn8_0.25_0.85.csv"
+            "FairSort_Uniform_Weight"] = sotaPath + "FairSortOnLine/FairSortUniformOn8_0.25_0.85.csv"
         BestResultFilePath[
-            "FairSort_online_Quality_Weighted"] = sotaPath + "FairSortOnLine/FairSortQuality_NewOn8_0.2_0.85.csv"
+            "FairSort_Quality_Weight"] = sotaPath + "FairSortOnLine/FairSortQuality_NewOn8_0.2_0.85.csv"
     return BestResultFilePath
 def getModels(metric,dataset):
     BestResultFilePath = getAllModels(dataset)#Get the 10 models, according to the data set
@@ -203,12 +200,12 @@ def getModels(metric,dataset):
         BestResultFilePath.pop("Mixed-k")
         return BestResultFilePath
     elif metric=="Variance of exposure":
-        BestResultFilePath.pop("FairSort_online_Quality_Weighted")
-        BestResultFilePath.pop("TFROM_online_Quality_Weighted")
+        BestResultFilePath.pop("FairSort_Quality_Weight")
+        BestResultFilePath.pop("TFROM_Quality_Weight")
         return BestResultFilePath
     elif metric=="Exposure_quality_var":
-        BestResultFilePath.pop("TFROM_online_Uniform")
-        BestResultFilePath.pop("FairSort_online_Uniform")
+        BestResultFilePath.pop("TFROM_Uniform_Weight")
+        BestResultFilePath.pop("FairSort_Uniform_Weight")
         return BestResultFilePath
 
 
