@@ -145,7 +145,9 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
 
     producerQualitySum=sum(producer_qualityList)
     #算法开始：
+    results_Robust = []
     for round_temp in range(len(user_Random)):
+
         print("The curent user ： "+str(round_temp)+" request Recommendation:")
         userTemp=user_Random[round_temp]
         userIDCG=UserIDCGList[userTemp]
@@ -226,9 +228,12 @@ def FairSortOnLine (λ,ratio,gap,NDCG_LowBound,K,score,sorted_score,qualityOrUni
         if(round_temp==len(user_Random)-1):
             print("Final procesion：")
             print("Final provider's Fair Exposure Distribution: ",Fair_ExposureList)
-            print("Final provider's Exposure Distribution:：",producerExposureList)
+            print("Final provider's Exposure Distribution:",producerExposureList)
             print("Fianl Error Between Fair Distribution and Current provider Exposure Distribution::",Utils.getFairAndCurrentErr(producerExposureList,Fair_ExposureList))
             print("Coversation Rate Distribution: ",Utils.getProducerExposurCoversionRate(producerExposureList,qualityOrUniform,provider_SizeList,producer_qualityList))
-        writer.writerow(row)
+        if(writer!=None):
+            writer.writerow(row)
+        results_Robust.append([result[0],np.var(userAvgSatisfactionList),temp])
+    return results_Robust
 if __name__ == '__main__':
     pass

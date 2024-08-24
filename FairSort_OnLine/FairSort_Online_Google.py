@@ -44,7 +44,7 @@ if __name__ == '__main__':
     K=20
     λ=8
     ratio=0.2
-    low_bound=0.8
+    low_bound=0.85
     gap=1/64
     qualityOrUniform =0  # Fair appeal: 0 is Quality and 1 is Uniform
     # save result analyze

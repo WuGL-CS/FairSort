@@ -70,6 +70,8 @@ def paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,linewidth,markersize
             ax.plot(X,Y,label=modelName, linestyle=':', marker="X",markersize=markersize, color="red",lw=linewidth)   # Plot more data on the axes...
     ax.set_xlabel(x_label, fontsize="40")  # Add an x-label to the axes.
     ax.set_ylabel(y_label, fontsize="30")  # Add a y-label to the axes.
+    if(y_label=="Variance of the ratio of exposure and relevance"):
+        ax.set_ylabel(y_label, fontsize="22")  # Add a y-label to the axes.
     ax.set_title(title)  # Add a title to the axes.
     plt.xticks(fontsize=32)
     plt.yticks(fontsize=32)

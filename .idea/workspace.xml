@@ -7,9 +7,14 @@
     <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) Time:2024 year 4,16">
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Variance of exposure.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Amazon_Online_Average recommendation quality.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Ctrip_Online_Average recommendation quality.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Robust.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortQuality_NewOff32_0.1_0.9.csv" afterDir="false" />
@@ -34,14 +39,20 @@
       <change afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM/result_quality.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Uniform.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/amazon/FairSort_Robust(threadhold)_QF.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/amazon/FairSort_Robust(threadhold)_UF.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/ctrip/FairSort_Robust(threadhold)_QF.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/ctrip/FairSort_Robust(threadhold)_UF.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/google/FairSort_Robust(threadhold)_QF.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/google/FairSort_Robust(threadhold)_UF.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/user_random_Robust/amazon/FairSort_Robust(userRandom)_UF.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/user_random_Robust/ctrip/FairSort_Robust(userRandom)_QF.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Robust.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Robust.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_Robust.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_Robust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Google.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Google.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +84,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/results_Robust/threadhold_Robust" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FairSort-TKDE-2024-8-17\FairSort\results_Robust\threadhold_Robust" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FairSort-TKDE-2024-8-17\FairSort\results_Robust\user_random_Robust" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.ResultAnalysis_Robust">
+    <configuration name="FairSort_Online_Robust" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Robust.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="FairSort_Robust" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,48 +130,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/FairSort_Robust.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MCPFairResultAnalysis_Offline" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FairSort" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/MCPFairResultAnalysis_Offline.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ResultAnalysis_OffLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FairSort" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,13 +181,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ResultAnalysis_Robust" />
+        <item itemvalue="Python.FairSort_Online_Robust" />
+        <item itemvalue="Python.Test" />
         <item itemvalue="Python.FairSort_Robust" />
         <item itemvalue="Python.ResultAnalysis_OnLine" />
-        <item itemvalue="Python.ResultAnalysis_OffLine" />
-        <item itemvalue="Python.MCPFairResultAnalysis_Offline" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713277431803</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added the offline version of the robustness experiment and changed the legend name">
+      <created>1724419907259</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724419907259</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +404,8 @@
     <MESSAGE value="(Final Version) Time:2023,11,27" />
     <MESSAGE value="(Final Version) Time:2023 year 11,27" />
     <MESSAGE value="(Final Version) Time:2024 year 4,16" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2024 year 4,16" />
+    <MESSAGE value="Added the offline version of the robustness experiment and changed the legend name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the offline version of the robustness experiment and changed the legend name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -409,6 +439,11 @@
           <url>file://$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py</url>
           <line>39</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Robust.py</url>
+          <line>215</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
