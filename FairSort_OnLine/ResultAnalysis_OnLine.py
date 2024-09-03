@@ -227,7 +227,7 @@ if __name__ == '__main__':
     lineWidth = 5
     markerSize = 25
     markevery = 1500
-    metrix = ["Average recommendation quality","Variance of NDCG","Variance of exposure","Exposure_quality_var"]
+    metrix = ["Average recommendation quality", "Variance of NDCG", "Variance of exposure", "Exposure_quality_var"]
     datasets = ["ctrip", "amazon", "google"]
     filePathBase = "..\\FairSortFigure\\OnLine_Pig"
     getResult(metrix, datasets, lineWidth, markerSize,markevery,filePathBase)

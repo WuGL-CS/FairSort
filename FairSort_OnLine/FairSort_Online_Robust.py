@@ -8,8 +8,8 @@ def SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform):
     fairType=""
     if qualityOrUniform==0:fairType="QF"
     elif(qualityOrUniform==1):fairType="UF"
-    fileName="/FairSort_Robust(userRandom)_"+fairType+".csv"
-    csvFile = open("../results_Robust/user_random_Robust/" + dataset_name+fileName
+    fileName="/FairSort_Robust(user_Random_Seeds)_"+fairType+".csv"
+    csvFile = open("../results_Robust/user_Random_Seeds_Robust/" + dataset_name+fileName
                    , 'w', newline='')
     writer = csv.writer(csvFile)
     title = []
@@ -21,7 +21,7 @@ def SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform):
         title.append('exposure_quality_var_average')
     elif(qualityOrUniform==1):
         # title.append('Top-k_SizeVar')
-        title.append('exposure_var_everage')
+        title.append('exposure_var_average')
     writer.writerow(title)
     return csvFile
 #input：
@@ -64,9 +64,9 @@ def FairSort_Online_Robust(DataSet,radomSeeds):
         K = 20
         λ = 8
         ratio = 1
-        low_bound = 0.9
+        low_bound = 0.85
         gap = 1 / 256
-        qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
+        qualityOrUniform = 1  # Fair appeal: 0 is Quality and 1 is Uniform
         # save result analyze
         csvFile = SaveResult_WriteTitle_Online(dataset_name,qualityOrUniform)
         writer = csv.writer(csvFile)
