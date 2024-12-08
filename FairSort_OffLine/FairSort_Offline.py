@@ -303,27 +303,23 @@ def FairSortForTheWhole(userList, λ,score, sorted_score,ratio, K, NDCG_low_boun
     row.append(userSatisfaction_var)  # 用户满意度向量的方差
     row.append(userSatisfaction_diverse)  # 满意度的绝对值平均偏移量
     row.append(user_satisfactionTotal)  # 用户总满意度
+
     if(fairRegulation==1):
         row.append(Utils.getVar(
             Utils.getProducerExposurCoversionRate(producerExposure_TopK, 1, providerSize, provider_quality)))  # 'Top-k_SizeVar'
         row.append(producer_exposure_Size_var)  # 曝光基于物品数转化率的方差
         row.append(producer_exposure_Size_diverse)  # 曝光基于物品数转化率的绝对值偏移
+        row.append(Utils.calculate_Inequality_Producer_Exposure(Utils.getProducerExposurCoversionRate(producerExposure, 1, providerSize, provider_quality)))  # 'Top-k_SizeVar'
     elif(fairRegulation==0):
         row.append(Utils.getVar(
             Utils.getProducerExposurCoversionRate(producerExposure_TopK, 0, providerSize,
                                             provider_quality)))  # 'Top-k_qualityVar'
         row.append(producer_exposure_quality_var)  # 曝光基于价值的转化率方差
         row.append(producer_exposure_quality_diverse)  ##曝光基于价值的绝对值转化率偏移
-    row.append(Utils.getVar(Utils.getFairAndCurrentErr(producerExposure_TopK, fair_exposure)))  # 期初的方差：
-    row.append(Utils.getVar(Utils.getFairAndCurrentErr(producerExposure, fair_exposure)))  # 方差力度
-    if(dataSetName!='google'):
-        row.append(Utils.getProducerExposurCoversionRate(producerExposure_TopK, fairRegulation, providerSize,
-                                               provider_quality))  # "Top-K转化率分布"
-        row.append(Utils.getProducerExposurCoversionRate(producerExposure, fairRegulation, providerSize,
-                                                   provider_quality))  # "FairSort转化率分布"
-        row.append(fair_exposure)  # "公平曝光资源分布"
-        row.append(Utils.getFairAndCurrentErr(producerExposure_TopK, fair_exposure))  # "Top-K曝光err"
-        row.append(Utils.getFairAndCurrentErr(producerExposure, fair_exposure))  # "FairSort曝光err"
-        row.append(providerSize)  # "提供商物品数分布"
-        row.append(provider_quality)  # "提供商价值量分布"
+        row.append(Utils.calculate_Inequality_Producer_Exposure(Utils.getProducerExposurCoversionRate(producerExposure, 0, providerSize,
+                                            provider_quality)))
+
+
+
+    row.append(Utils.calculate_envy(userSatisfaction))
     return row

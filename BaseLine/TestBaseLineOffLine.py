@@ -32,6 +32,9 @@ def writeCsvTitleOffLine(DataSetName,BaseLineName):
     title.append('exposure_quality_diverse')
     title.append('exposure_var')
     title.append('exposure_diverse')
+    title.append('Mean Average Envy')
+    title.append('Inequality in Producer Exposure(QF)')
+    title.append('Inequality in Producer Exposure(UF)')
     writer.writerow(title)
     return writer
 
@@ -84,6 +87,9 @@ def testBaseLineOffLine(DataSetName,BaseLineName,K,writer):
     row.append(UniformFairIndex)
     print("******UniformFairIndex:******：", UniformFairIndex)
     row.append(FairSortUtils.getDiverse(rateSizeList))
+    row.append(FairSortUtils.calculate_envy(userSatisfactionList))# get this list for compute the Mean Average Envy：$$\frac{1}{n} \sum_{u \in U} \frac{1}{n-1} \sum_{u'\in U,u'≠ u} envy(u,u') $$ where $$envy(u,u')=max \large( NDCG_{u'}- NDCG_{u},0)$$
+    row.append(FairSortUtils.calculate_Inequality_Producer_Exposure(rateQualityList))
+    row.append(FairSortUtils.calculate_Inequality_Producer_Exposure(rateSizeList))
     writer.writerow(row)
 
     print("Current K:")
@@ -98,5 +104,6 @@ def testBaseLineOffLine(DataSetName,BaseLineName,K,writer):
 
 if __name__ == '__main__':
     writer = writeCsvTitleOffLine("ctrip", "FairRecOffLine")
-    for K in range(2,26):
+    for K in range(24,26):
         testBaseLineOffLine("ctrip","FairRecOffLine",K,writer)
+    print("this window for ctrip FairRecOffLine ")

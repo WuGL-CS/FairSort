@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import csv
 import math
+from FairSort_OffLine import FairSort_Utils as Utils
 import random
 import pickle
 def getProducerExposurCoversionRate(producerExposure,fairRegulation,providerSize,provider_quality):
@@ -140,6 +141,8 @@ def offlineFunction(k_temp,score,ticket_list,sorted_score,result_writer,provider
         row.append(np.var(provider_exposure_quality))#曝光基于价值的转化率方差
         row.append(divers_exposure_quality)##曝光基于价值的绝对值转化率偏移
         row.append(np.var(getFairAndCurrentErr(provider_exposure_score,fair_exposure)))
+        row.append(Utils.calculate_envy(user_satisfaction))
+        row.append(Utils.calculate_Inequality_Producer_Exposure(provider_exposure_quality))
         result_writer.writerow(row)
 def save_variable(v,filename):
   f=open(filename,'wb')          #打开或创建名叫filename的文档。
@@ -205,6 +208,8 @@ title.append('exposure_diverse')
 title.append('exposure_quality_var')
 title.append('exposure_quality_diverse')
 title.append('方差力度')
+title.append('Mean Average Envy')
+title.append('Inequality in Producer Exposure(QF)')
 writer.writerow(title)
 
 provider_quality = [0 for i in range(len(provider))]
@@ -248,4 +253,5 @@ for k_temp in range(2,26):
 print(f'时间差:{time.time() - t:.3f}s')
 csvFile.close()
 print('Finished!')
+print('this is for TFROM ctrip (QF)')
    

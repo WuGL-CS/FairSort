@@ -44,9 +44,9 @@ if __name__ == '__main__':
         # hyperParameter
     λ = 8
     ratio = 0.15
-    low_bound = 0.9
+    low_bound = 0.85
     gap = 1/64
-    qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
+    qualityOrUniform = 1  # Fair appeal: 0 is Quality and 1 is Uniform
     userList = [i for i in range(m)]  # userList的构造
     # save result analyze
     #命名一个函数名，并且把文件创建好，把title
@@ -62,3 +62,4 @@ if __name__ == '__main__':
 
     csvFile.close()
     print('Finished!')
+    print('this is for google FairSort(UF)')

@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6c8e7aa-bfdd-407a-803a-6a6c8a653b33" name="Changes" comment="(Final Version) Time:2024 year 4,16">
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/FairRecOffLines.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/FairRecOffLiness.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Mean Average Envy.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Amazon_Offline_Variance of exposure.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Inequality in Producer Exposure(QF).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Mean Average Envy.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Total recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Ctrip_Offline_Variance of exposure.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Mean Average Envy.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig/Google_Offline_Variance of exposure.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Exposure_quality_var.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Exposure_quality_var_Plus.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Amazon_Offline_Total recommendation quality.pdf" afterDir="false" />
@@ -25,6 +42,11 @@
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Google_Offline_Total recommendation quality.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Google_Offline_Variance of NDCG.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OffLine_Pig_Robust/Google_Offline_Variance of exposure.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Quality_Weighted_Fairness/Amazon_Offline_UIR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Quality_Weighted_Fairness/Google_Offline_UIR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Uniform_Weighted_Fairness/Amazon_Offline_UIR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Uniform_Weighted_Fairness/Ctrip_Offline_UIR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Offline_Pig_UIR/Uniform_Weighted_Fairness/Google_Offline_UIR.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig_Robust/Amazon_Online_exposure_quality_var_average.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig_Robust/Amazon_Online_exposure_quality_var_average.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig_Robust/Amazon_Online_exposure_var_average.pdf" afterDir="false" />
@@ -50,12 +72,21 @@
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig_Robust/Google_Online_satisfaction_var_average.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/OnLine_Pig_Robust/Google_Online_satisfaction_var_average.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Amazon_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Amazon_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Amazon_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Amazon_Online_Variance of exposure.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Ctrip_Online_Average recommendation quality.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Ctrip_Online_Exposure_quality_var.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Ctrip_Online_Variance of NDCG.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Ctrip_Online_Variance of exposure.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Average recommendation quality.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Average recommendation quality.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Exposure_quality_var.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Variance of NDCG.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Variance of NDCG.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_Robust.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSortFigure/Online_Pig/Google_Online_Variance of exposure.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OtherIndex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortQuality_NewOn1_0.1_0.95.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortOnLine/FairSortUniformOn1_0.1_0.95.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_amazon/FairSortQuality_NewOff32_0.1_0.9.csv" afterDir="false" />
@@ -67,7 +98,7 @@
       <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortQuality_NewOn8_1_0.9.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortOnLine/FairSortUniformOn8_1_0.85.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortQuality_NewOff16_1_0.9.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortUniformOff_16_1_0.85.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/FairSortUniformOff16_1_0.85.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_Uniform.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM/result_quality.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_ctrip/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
@@ -80,6 +111,13 @@
       <change afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM/result_quality.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Quality.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/datasets/results/result_google/TFROM_Dynamic/dynamic_result_Uniform.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/threadhold_Robust.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/amazon/FairSort_Robust(threadhold)_QF.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/amazon/FairSort_Robust(threadhold)_UF.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results_Robust/threadhold_Robust/ctrip/FairSort_Robust(threadhold)_QF.csv" afterDir="false" />
@@ -92,11 +130,34 @@
       <change afterPath="$PROJECT_DIR$/results_Robust/user_Random_Seeds_Robust/ctrip/FairSort_Robust(user_Random_Seeds)_UF.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results_Robust/user_Random_Seeds_Robust/google/FairSort_Robust(user_Random_Seeds)_QF.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/results_Robust/user_Random_Seeds_Robust/google/FairSort_Robust(user_Random_Seeds)_UF.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FairSort.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FairSort.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/CP_Fair_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/CP_Fair_Offline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/FairRecOffLine.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/Top_K_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/amazon/Top_K_Offline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/CP_Fair_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/CP_Fair_Offline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/FairRecOffLine.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/Top_K_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/ctrip/Top_K_Offline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/CP_Fair_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/CP_Fair_Offline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/FairRecOffLine.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/FairRecOffLine.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/Top_K_Offline.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/Results/OffLine/google/Top_K_Offline.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseLine/TestBaseLineOffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/BaseLine/TestBaseLineOffLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Amazon.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Amazon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Ctrip.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Ctrip.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_google.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_google.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_Robust.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_Robust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Robust.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Robust.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FairSort_OffLine/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/FairSort_OffLine/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_quality_weighted.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_quality_weighted.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_quality_weighted_g&amp;a.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_quality_weighted_g&amp;a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_uniform.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_uniform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TFROM_uniform_g&amp;a.py" beforeDir="false" afterPath="$PROJECT_DIR$/TFROM_uniform_g&amp;a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,16 +171,51 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="KEEP" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "WuGL-CS"
+  }
+}]]></component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:13543024276/FairSort.git",
+    "accountId": "fbae9983-648f-468f-be98-c4fa2b0dcd0f"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedIndex" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2Wo7XJA41WsSV4srewx456mxsPH" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -128,9 +224,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/results_Robust/threadhold_Robust" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\FairSort-TKDE-2024-8-17\FairSort\results_Robust\threadhold_Robust" />
@@ -143,30 +248,10 @@
       <recent name="D:\FairSort-TKDE-2024-8-17\FairSort\results_Robust\user_random_Robust" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ResultAnalysis_OffLine">
-    <configuration name="FairSort_Online_Robust" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Test">
+    <configuration name="FairSort_Offline_Amazon" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/FairSort_Online_Robust.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="FairSort_Utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FairSort" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -177,7 +262,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/FairSort_Utils.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/FairSort_Offline_Amazon.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,6 +274,7 @@
     </configuration>
     <configuration name="ResultAnalysis_OffLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -198,6 +285,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OffLine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -207,19 +295,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ResultAnalysis_OnLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ResultAnalysis_OtherIndex" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OffLine" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_OnLine.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OtherIndex.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,19 +318,44 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ResultAnalysis_Robust (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FairSort" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/FairSort_OnLine" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FairSort_OnLine/ResultAnalysis_Robust.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestBaseLineOffLine" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FairSort" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BaseLine" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BaseLine/TestBaseLineOffLine.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -251,13 +366,21 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.ResultAnalysis_OtherIndex" />
         <item itemvalue="Python.ResultAnalysis_OffLine" />
-        <item itemvalue="Python.ResultAnalysis_Robust (1)" />
-        <item itemvalue="Python.FairSort_Online_Robust" />
-        <item itemvalue="Python.FairSort_Utils" />
-        <item itemvalue="Python.ResultAnalysis_OnLine" />
+        <item itemvalue="Python.TestBaseLineOffLine" />
+        <item itemvalue="Python.FairSort_Offline_Amazon" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -285,6 +408,15 @@
       <workItem from="1711252266077" duration="13000" />
       <workItem from="1712975338576" duration="20000" />
       <workItem from="1712975376689" duration="16000" />
+      <workItem from="1731769639668" duration="298000" />
+      <workItem from="1731769950503" duration="2135000" />
+      <workItem from="1731812190787" duration="5895000" />
+      <workItem from="1731845410034" duration="2213000" />
+      <workItem from="1732029883910" duration="1784000" />
+      <workItem from="1732267554551" duration="695000" />
+      <workItem from="1733566960261" duration="614000" />
+      <workItem from="1733570070745" duration="750000" />
+      <workItem from="1733640634274" duration="1581000" />
     </task>
     <task id="LOCAL-00001" summary="对其中的在线版改为无噪声的指标计算（Quality）,并重跑了所有的数据，其次是，score bug的修复，但又发现bug，就是对比场景不一致，你FairSort和TFROM都是动态更新provider Quality，但baseline不是，所以有必要纠正，以及设计的综合评价指标代码">
       <option name="closed" value="true" />
@@ -400,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1724500487635</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="(Final Version) Time:2024 year 9,3">
+      <created>1725354955165</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1725354955165</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +578,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -460,7 +598,8 @@
     <MESSAGE value="(Final Version) Time:2024 year 4,16" />
     <MESSAGE value="Added the offline version of the robustness experiment and changed the legend name" />
     <MESSAGE value="Added online robustness experiment code: tested models' robustness reactions to different random sequences. Bug fixes in the offline robustness and results analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added online robustness experiment code: tested models' robustness reactions to different random sequences. Bug fixes in the offline robustness and results analysis" />
+    <MESSAGE value="(Final Version) Time:2024 year 9,3" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Final Version) Time:2024 year 9,3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -515,7 +654,17 @@
           <line>96</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FairSort_OffLine/ResultAnalysis_OtherIndex.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="Y_len" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

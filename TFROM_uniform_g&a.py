@@ -45,7 +45,9 @@ title.append('Top-K_exposure_var')
 title.append('exposure_var')
 title.append('exposure_diverse')
 # title.append('Top-k Conversation Rate')
-title.append('TFROM-Conversation Rate')
+
+title.append("Mean Average Envy")
+title.append("Inequality in Producer Exposure(UF)")
 writer.writerow(title)
 
 for k_temp in range(2, k+1):
@@ -176,9 +178,12 @@ for k_temp in range(2, k+1):
     row.append(np.var(FairFunction.getProducerExposurCoversionRate(producerExposure_TopK,1,providerSize,None)))
     row.append(np.var(avg_provider_exposure_score))
     row.append(diverse_exposure_score)
+    row.append(FairFunction.calculate_envy(user_satisfaction))
+    row.append(FairFunction.calculate_Inequality_Producer_Exposure(avg_provider_exposure_score))
     # row.append(FairFunction.getProducerExposurCoversionRate(producerExposure_TopK,1,providerSize,None))
     # row.append(FairFunction.getProducerExposurCoversionRate(provider_exposure_score,1,providerSize,None))
     writer.writerow(row)
 csvFile.close()
 print('Finished!')
+print('this is for TFROM (UF) google')
 

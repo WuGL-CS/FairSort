@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import csv
+import ast
 class DraggableLegend:
     def __init__(self, legend):
         self.legend = legend
@@ -30,15 +32,35 @@ class DraggableLegend:
     def on_release(self, event):
         if self.gotLegend:
             self.gotLegend = False
+
+
+
+
+
+
 def resultAnalysis_Offline(BestResultFilePath,title,indexName,X_len,Y_len,x_label,y_label,marker,lw,markersize,filePath):
     Y_dict={}
     X = [x for x in range(2,26)]
     for modelName , path in BestResultFilePath.items():
-            csv=pd.read_csv(path,encoding="gbk")
-            # if(modelName=="FairSort_Uniform"):
-            #     indexName="exposure_var"
-            Y_dict[modelName]=np.array(csv[indexName])#this indexName has no extendable(bug)
+            Y_list = []
+            # 打开CSV文件并读取
+            with open(path, newline='') as csvfile:
+                reader = csv.DictReader(csvfile)
 
+                # 假设要处理的列索引是 'NDCG_distribution'
+                for row in reader:
+                    # 读取到的是字符串，需要转换为数组
+                    ndcg_str = row[indexName]  # 这是一个字符串，比如 "[0.75, 0.85, 0.92]"
+
+                    # 使用 ast.literal_eval 将字符串转换为数组
+                    try:
+                        Y_list.append(ast.literal_eval(ndcg_str))
+
+                    except (ValueError, SyntaxError):
+                        print(f"无法将字符串 '{ndcg_str}' 转换为数组")
+
+
+            Y_dict[modelName] =Y_list
 
     paint(X,Y_dict,title,X_len,Y_len,x_label,y_label,marker,lw,markersize,filePath)
 #X_len=5 Y_len=2.7
@@ -123,24 +145,21 @@ def getAllModels(dataset):
     return BestResultFilePath
 def getModels(metric,dataset):
     BestResultFilePath = getAllModels(dataset)#Get the 10 models, according to the data set
-    if metric =="Total recommendation quality":
+    BestResultFilePath.pop("All_Random")
+    BestResultFilePath.pop("Mixed-k")
+    BestResultFilePath.pop("Minimum_Exposure")
+
+    if metric =="Mean Average Envy":
         return BestResultFilePath
-    elif metric=="Variance of NDCG":
-        BestResultFilePath.pop("All_Random")
-        BestResultFilePath.pop("Mixed-k")
+    elif metric=="Inequality in Producer Exposure(QF)":
+        BestResultFilePath.pop("FairSort_Uniform_Weight")
+        BestResultFilePath.pop("TFROM_Uniform_Weight")
         return BestResultFilePath
-    elif metric=="Variance of exposure":
+    elif metric=="Inequality in Producer Exposure(UF)":
         BestResultFilePath.pop("FairSort_Quality_Weight")
         BestResultFilePath.pop("TFROM_Quality_Weight")
-        BestResultFilePath.pop("Mixed-k")
         return BestResultFilePath
-    elif metric=="Exposure_quality_var":
-        BestResultFilePath.pop("TFROM_Uniform_Weight")
-        BestResultFilePath.pop("FairSort_Uniform_Weight")
-        BestResultFilePath.pop("Mixed-k")
-        BestResultFilePath.pop("All_Random")
-        BestResultFilePath.pop("Minimum_Exposure")
-        return BestResultFilePath
+
 
 
 def getResult(Metric,Dataset,lineWidth,markerSize,filePathBase):
@@ -149,23 +168,20 @@ def getResult(Metric,Dataset,lineWidth,markerSize,filePathBase):
             datasetTitle=dataset.title()
             Models=getModels(metric,dataset)
             path = filePathBase + f"/{datasetTitle}_Offline_" + metric+".pdf"
-            if metric =="Total recommendation quality":
-                resultAnalysis_Offline(Models,"","satisfaction_total",19.2,10.8,"K",
+            if metric =="Mean Average Envy":
+                resultAnalysis_Offline(Models,"","Mean Average Envy",19.2,10.8,"K",
                                   metric,"*",lineWidth,markerSize,path)
-            elif metric=="Variance of NDCG":
-                resultAnalysis_Offline(Models, "", "satisfaction_var", 19.2, 10.8, "K", metric,
+            elif metric=="Inequality in Producer Exposure(QF)":
+                resultAnalysis_Offline(Models, "", "Inequality in Producer Exposure(QF)", 19.2, 10.8, "K", metric,
                                       "^", lineWidth, markerSize,path)
-            elif metric=="Variance of exposure":
-                resultAnalysis_Offline(Models, "", "exposure_var", 19.2, 10.8, "K", metric,
+            elif metric=="Inequality in Producer Exposure(UF)":
+                resultAnalysis_Offline(Models, "", "Inequality in Producer Exposure(UF)", 19.2, 10.8, "K", metric,
                                       "o", lineWidth, markerSize,path)
-            elif metric == "Exposure_quality_var":
-                resultAnalysis_Offline(Models, "", "exposure_quality_var", 19.2, 10.8, "K",
-                                      "Variance of the ratio of exposure and relevance", "D", lineWidth, markerSize,path)
 
 if __name__ == '__main__':
     lineWidth=5
     markerSize=19
-    metrix=["Total recommendation quality","Variance of NDCG","Variance of exposure", "Exposure_quality_var"]
+    metrix=["Mean Average Envy","Inequality in Producer Exposure(QF)","Inequality in Producer Exposure(UF)"]
     datasets=["ctrip","amazon","google"]
     filePathBase="..\\FairSortFigure\\OffLine_Pig"
     getResult(metrix,datasets,lineWidth,markerSize,filePathBase)

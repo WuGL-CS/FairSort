@@ -37,9 +37,9 @@ if __name__ == '__main__':
     k=25
     λ=16
     ratio=1
-    low_bound=0.9
+    low_bound=0.85
     gap=1/64
-    qualityOrUniform = 0  # Fair appeal: 0 is Quality and 1 is Uniform
+    qualityOrUniform = 1  # Fair appeal: 0 is Quality and 1 is Uniform
     # save result analyze
     csvFile=Utils.SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bound)
     writer=csv.writer(csvFile)
@@ -62,7 +62,7 @@ if __name__ == '__main__':
 # result=FairSortForUser(user_temp,λ,F,score,sorted_score,0.97,K,0.00000003,1,item_ProducerNameList,index_ProducerNameList)
 # print(result[0])
 # print(result[1])
-
+print("this window is for ctrip FairSort(UF)")
 
 #记得思考一个逻辑：公平诉求如果没有的话，我们就不需要调控
 # 值得思考一下，如何控制二分查找其最后

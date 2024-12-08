@@ -3,6 +3,7 @@ import numpy as np
 import csv
 import math
 import random
+from FairSort_OffLine import FairSort_Utils as Utils
 import pickle
 from FairSort_OffLine import FairSort_Utils as FairFunction
 def getFairAndCurrentErr(producerExposure,fair_exposure):
@@ -48,12 +49,12 @@ if __name__ == '__main__':
     user_number_google = 3335
     provider_num_google = 4927
 
-    m = user_number_amazon
-    n = item_number_amazon
-    provider_num = provider_num_amazon
+    m = user_number_google
+    n = item_number_google
+    provider_num = provider_num_google
 
     k = 25
-    dataset_name = 'amazon'
+    dataset_name = 'google'
     score_file = '/preference_score.csv'
     item_file = '/item_provider.csv'
 
@@ -82,6 +83,8 @@ if __name__ == '__main__':
     title.append('exposure_quality_diverse')
     title.append("fair_VarAtFirst")
     title.append("fair_Var")
+    title.append("Mean Average Envy")
+    title.append("Inequality in Producer Exposure(QF)")
     # title.append('Top-k Conversation Rate')
     # title.append('TFROM-Conversation Rate')
     writer.writerow(title)
@@ -234,8 +237,10 @@ if __name__ == '__main__':
         row.append(np.var(getFairAndCurrentErr(provider_exposure_score,fair_exposure)))
         # row.append(TopK_ExposureConversationRate)
         # row.append(provider_exposure_quality)
+        row.append(Utils.calculate_envy(user_satisfaction))
+        row.append(Utils.calculate_Inequality_Producer_Exposure(provider_exposure_quality))
         writer.writerow(row)
 
 csvFile.close()
 print('Finished!')
-
+print('this is for google TFROM(QF)')

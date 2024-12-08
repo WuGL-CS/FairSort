@@ -3,7 +3,7 @@ import numpy as np
 import csv
 import math
 import random
-
+from FairSort_OffLine import FairSort_Utils as Utils
 o_num_international = 25190
 u_num_international = 3814
 t_num_international = 6006
@@ -31,7 +31,7 @@ provider = []
 provider_size = []
 grouped_ticket = ticket_list.groupby((["airline"]))
 for group_name,group_list in grouped_ticket:
-    provider.append(group_name)
+    provider.append(group_name[0])#this line have a bug: it sometimes should be group_name[0] or group_name
     provider_size.append(len(group_list))
 provider_size_total = sum(provider_size)
 
@@ -46,6 +46,8 @@ title.append('satisfaction_total')
 title.append('satisfaction_diverse')
 title.append('exposure_var')
 title.append('exposure_diverse')
+title.append("Mean Average Envy")
+title.append("Inequality in Producer Exposure(UF)")
 writer.writerow(title)
 
 for k_temp in range(2, k+1):
@@ -139,8 +141,10 @@ for k_temp in range(2, k+1):
     row.append(diverse_satisfaction)
     row.append(np.var(avg_provider_exposure_score))
     row.append(diverse_exposure_score)
+    row.append(Utils.calculate_envy(user_satisfaction))
+    row.append(Utils.calculate_Inequality_Producer_Exposure(avg_provider_exposure_score))
     writer.writerow(row)
 
 csvFile.close()
 print('Finished!')
-
+print("this is for ctrip Tfrom(UF)")

@@ -122,23 +122,23 @@ def SaveResult_WriteTitle_Offline(dataset_name,qualityOrUniform,λ,ratio,low_bou
     title.append('satisfaction_var')
     title.append('satisfaction_diverse')
     title.append('satisfaction_total')
+
     if(qualityOrUniform==0):
         title.append('Top-k_qualityVar')
         title.append('exposure_quality_var')
         title.append('exposure_quality_diverse')
+        title.append('Inequality in Producer Exposure(QF)')
     elif(qualityOrUniform==1):
         title.append('Top-k_SizeVar')
         title.append('exposure_var')
         title.append('exposure_diverse')
-    title.append('fair_VarAtFirst')
-    title.append('fair_Var')  # 公平要求下的方差值：越小越好，说明地整的越平
-    title.append("Top-K转化率分布")
-    title.append("FairSort转化率分布")
-    title.append("公平曝光资源分布")
-    title.append("Top-K曝光err")
-    title.append("FairSort曝光err")
-    title.append("提供商物品数分布")
-    title.append("提供商价值量分布")
+        title.append('Inequality in Producer Exposure(UF)')
+
+
+
+
+
+    title.append('Mean Average Envy')
     writer.writerow(title)
     return csvFile
 
@@ -280,3 +280,34 @@ if __name__ == '__main__':
     getSatisfactionDistribution2(0.92,satisDistribute)
     getSatisfactionDistribution2(0.77,satisDistribute)
     print(satisDistribute)
+
+import math
+
+
+def calculate_Inequality_Producer_Exposure(item):
+    total_rate = sum(item)
+    inequality = 0
+    length = len(item)
+
+    for data in item:
+        if data > 0:
+            rate_fraction = data / total_rate
+            inequality += (rate_fraction * math.log(rate_fraction, length))  # 使用 log2
+
+    inequality = -inequality  # 取负值以符合公式
+    return inequality
+
+def calculate_envy(ndcg):
+    n = len(ndcg)  # 用户数量
+    envy_sum = 0  # 初始化 envy 总和
+
+    # 遍历每对用户 (u, u')
+    for i in range(n):
+        for j in range(n):
+            if i != j:  # 确保 u' ≠ u
+                envy_value = max(ndcg[j] - ndcg[i], 0)  # 计算 envy(u, u')
+                envy_sum += envy_value
+
+    # 计算平均 envy
+    envy_average = (1 / n) * (1 / (n - 1)) * envy_sum
+    return envy_average
