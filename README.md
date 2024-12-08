@@ -15,7 +15,7 @@ Recommendations in Two-Sided Platforms.](https://arxiv.org/abs/2412.00424)
 Authors: Guoli Wu, Zhiyong Feng, Shizhan Chen, Hongyue Wu, Xiao Xue, Jianmao Xiao, Guodong Fan, Hongqi Chen, Jingyu Li
 
 
-<div align=center><img src="FairSortDiagram.png" width="1300"/></div>
+<div align=center><img src="FairSort_diagrame.png" width="1300"/></div>
 
 ## Abstract
 Traditional recommendation systems focus on maximizing user satisfaction by suggesting their favorite items. This user-centric approach may lead to unfair exposure distribution among the providers. On the contrary, a provider-centric design might become unfair to the users. Therefore, this paper proposes a re-ranking model FairSort to find a trade-off solution among user-side fairness, provider-side fairness, and personalized recommendations utility. Previous works habitually treat this issue as a knapsack problem, incorporating both-side fairness as constraints.
